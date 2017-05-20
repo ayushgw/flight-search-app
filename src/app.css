@@ -1,0 +1,6 @@
+body {
+  background-color: linear-gradient(135deg, rgba(78, 230, 174, 1) 0%, rgba(76, 153, 235, 1) 100%);
+  height: 100vh;
+  margin: 0;
+  background-repeat: no-repeat;
+}

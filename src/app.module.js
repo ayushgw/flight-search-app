@@ -1,6 +1,10 @@
+import 'jquery';
+import 'bootstrap-loader';
+
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
+import './app.css';
 import routes from './app.config';
 
 import main from './main/main.module';

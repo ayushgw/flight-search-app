@@ -4,20 +4,34 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack"
+    "build": "rimraf build && webpack"
   },
   "dependencies": {
     "angular": "^1.6.4",
     "angular-messages": "^1.6.4",
     "angular-resource": "^1.6.4",
-    "angular-ui-router": "^1.0.3"
+    "angular-ui-router": "^1.0.3",
+    "bootstrap-loader": "^2.1.0",
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",
+    "bootstrap-sass": "^3.3.7",
+    "css-loader": "^0.28.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
     "html-loader": "^0.4.5",
+    "image-webpack-loader": "^3.3.1",
     "ng-annotate-webpack-plugin": "^0.2.1-pre",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.5",
+    "resolve-url-loader": "^2.0.2",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.17.0",
+    "url-loader": "^0.5.8",
     "webpack": "^2.5.1"
   }
 }
