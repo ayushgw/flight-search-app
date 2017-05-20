@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app" ng-strict-di>
   <head>
     <meta charset="utf-8">
+    <base href="/">
     <title>Flight Search App</title>
+
   </head>
   <body>
     <h1>Flight Search App</h1>
+    <div class="container">
+      <div ui-view></div>
+    </div>
+
+    <script src="build/bundle.js" charset="utf-8"></script>
   </body>
 </html>

@@ -3,10 +3,21 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
   "dependencies": {
     "angular": "^1.6.4",
     "angular-messages": "^1.6.4",
     "angular-resource": "^1.6.4",
     "angular-ui-router": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "html-loader": "^0.4.5",
+    "ng-annotate-webpack-plugin": "^0.2.1-pre",
+    "webpack": "^2.5.1"
   }
 }
