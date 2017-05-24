@@ -1,8 +1,47 @@
 <div class="main">
-  <h3>Main -- Red</h3>
+  <div class="row">
+    <button ng-click="main.logoutUser()">Logout User</button>
 
-  <button class="btn btn-default" ui-sref="main.home">Home</button>
-  <button class="btn btn-default" ui-sref="main.results">Results</button>
+    <div class="col-md-6 text-center">
+      <h2>Already A User?</h2>
+      <hr>
 
-  <div ui-view></div>
+      <form name="login" class="main_form" role="form" ng-submit="main.loginUser(main.user.login)">
+        <div class="form-group">
+          <input type="text" ng-model="main.user.login.email" class="form-control" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input type="password" ng-model="main.user.login.password" class="form-control" placeholder="Password">
+        </div>
+        <div class="form-group text-center">
+          <button type="submit" class="btn btn-default btn_submit" name="button">Login</button>
+        </div>
+      </form>
+      <hr>
+      <button class="btn btn-primary" ng-click="main.oauthUserLogin('Google')">Sign in with Google</button>
+      <button class="btn btn-primary" ng-click="main.oauthUserLogin('Github')">Sign in with GitHub</button>
+    </div>
+
+    <div class="col-md-6 text-center">
+      <h2>Register New!</h2>
+      <hr>
+
+      <form name="register" class="main_form" role="form" ng-submit="main.registerUser(main.user.register)">
+        <div class="form-group">
+          <input type="text" ng-model="main.user.register.fullname" class="form-control" placeholder="Full Name" required="">
+        </div>
+        <div class="form-group">
+          <input type="email" ng-model="main.user.register.email" class="form-control" placeholder="Email" required="">
+        </div>
+        <div class="form-group">
+          <input type="password" ng-model="main.user.register.password" class="form-control" placeholder="Password" required="">
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-default btn_submit">Register</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
 </div>
