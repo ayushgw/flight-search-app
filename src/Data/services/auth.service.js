@@ -8,59 +8,24 @@ export default function AuthService(AuthInit) {
   var GithubProvider = AuthInit.GithubProvider;
 
   service.registerUser = function(user) {
-    Auth.createUserWithEmailAndPassword(user.email, user.password)
-    .then(function(userData) {
-      console.log('User Created Successfully!');
-      console.log(userData);
-    })
-    .catch(function(errorData) {
-      console.log(errorData);
-    })
+    return Auth.createUserWithEmailAndPassword(user.email, user.password);
   };
 
   service.loginUser = function(user) {
-    Auth.signInWithEmailAndPassword(user.email, user.password)
-    .then(function(userData){
-      console.log('User Logged In Successfully!');
-      console.log(userData);
-    })
-    .catch(function(error){
-      console.log(error);
-    });
-  };
-
-  service.deleteUser = function(user) {
-    Auth.deleteUser(user)
-    .then(function(response) {
-      console.log(response);
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
-  };
-
-  service.logoutUser = function() {
-    Auth.signOut()
-    .then(function() {
-      console.log('Signed Out');
-    }).catch(function(error) {
-      console.log(error);
-    });
+    return Auth.signInWithEmailAndPassword(user.email, user.password);
   };
 
   service.oauthUserLogin = function(provider) {
-    console.log(provider);
     let AuthProvider = AuthInit[provider];
+    return Auth.signInWithPopup(AuthProvider);
+  };
 
-    Auth.signInWithPopup(AuthProvider)
-    .then(function(result) {
-      console.log(result);
-      var token = result.credential.accessToken;
-      var user = result.user;
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
-  }
+  service.logoutUser = function() {
+    return Auth.signOut();
+  };
+
+  service.deleteUser = function(user) {
+    return Auth.deleteUser(user);
+  };
 
 }

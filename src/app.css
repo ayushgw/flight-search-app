@@ -1,14 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,600,600i,700|Lato:300,300i,400,400i,700,700i');
+
+* {
+  /*font-family: 'Lato', sans-serif;*/
+  font-family: 'Josefin Sans', sans-serif;
+}
 body {
-  background-image: url('Data/images/bg1.jpg');
-  background-position: center;
-  /*background: linear-gradient(140deg, rgba(242, 92, 112, 0.9) 0%, rgba(76, 153, 235, 0.9) 100%);*/
+  display: flex;
+  flex-flow: column;
   margin: 0;
   height: 100vh;
   background-repeat: no-repeat;
+}
+.row {
+  margin: 0 !important;
+}
+.custom_nav {
+  position: absolute;
+  color: white;
+  width: 100%;
+  font-size: 32px;
+  font-weight: 600;
+  font-style: italic;
+  padding: 10px 40px;
+  text-decoration: none;
+  text-transform: lowercase;
+  background-color: rgba(9, 9, 9, 0.2);
+}
+.custom_nav:hover {
+  text-decoration: none;
+  color: white;
+}
+.app_logo {
+  margin: 6px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+.app_logo img {
+  height: 40px;
+  margin-top: -6px;
+  margin-right: 12px;
+  margin-left: 18px;
+}
+.app_logo > span {
+  padding: 7px;
+  padding-bottom: 0px;
+  border: 1px solid white;
+  border-bottom: none;
+  border-radius: 4px 4px 0px 0px;
+}
+.yellow {
+  color: #F9F154;
 }
 .form-control {
   border-radius: 0px !important;
 }
 .btn {
   border-radius: 0px !important;
+  font-size: 16px !important;
+}
+.content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column;
 }

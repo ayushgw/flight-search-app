@@ -1,7 +1,7 @@
 export default function RoutesConfig($locationProvider, $urlRouterProvider, $stateProvider) {
   "ngInject";
 
-  // $locationProvider.html5Mode(true).hashPrefix('!');
+  $locationProvider.html5Mode(true).hashPrefix('!');
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
@@ -11,14 +11,14 @@ export default function RoutesConfig($locationProvider, $urlRouterProvider, $sta
     controller: 'MainController',
     controllerAs: 'main'
   })
-  .state('main.home', {
-    url: 'home',
+  .state('home', {
+    url: '/home',
     template: require('./home/home.template.html'),
     controller: 'HomeController',
     controllerAs: 'home'
   })
-  .state('main.results', {
-    url: 'results',
+  .state('results', {
+    url: '/results',
     template: require('./results/results.template.html'),
     controller: 'ResultsController',
     controllerAs: 'results'

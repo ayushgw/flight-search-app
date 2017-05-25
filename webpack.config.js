@@ -82,7 +82,7 @@ const config = {
           'css-loader',
           'postcss-loader'
         ]),
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
       {
         test: /\.html$/,
@@ -98,8 +98,6 @@ const config = {
         use: ['url-loader?limit=10000&name=assets/[hash:10].[ext]'],
         // exclude: /node_modules/
       },
-      // { test: /\.(woff2?|svg)$/, use: 'url-loader?limit=10000' },
-      // { test: /\.(ttf|eot)$/, use: 'file-loader' },
     ]
   },
   devServer: {

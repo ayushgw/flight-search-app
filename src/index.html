@@ -6,21 +6,14 @@
   <title>Flight Search App</title>
 </head>
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/">
-          &nbsp;&nbsp;&nbsp;
-          <i class="fa fa-plane" aria-hidden="true"></i>
-          &nbsp;
-          Flight Search App
-        </a>
-      </div>
+  <div class="custom_nav">
+    <div class="app_logo">
+      <img src="Data/images/airplane-takeoff.png">
+      <span>
+        <span class="yellow">flight</span> search app
+      </span>
     </div>
-  </nav>
-
-  <div class="container">
-    <div ui-view></div>
   </div>
+  <div class="content" ui-view></div>
 </body>
 </html>

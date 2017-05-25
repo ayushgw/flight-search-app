@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "angular": "^1.6.4",
+    "angular-animate": "^1.6.4",
     "angular-messages": "^1.6.4",
     "angular-resource": "^1.6.4",
     "angular-ui-router": "^1.0.3",
@@ -16,7 +17,8 @@
     "firebase": "^4.0.0",
     "firebaseui": "^2.0.0",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "mdi": "^1.9.33"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",

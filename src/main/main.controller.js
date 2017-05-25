@@ -1,16 +1,46 @@
-export default function MainController(AuthService) {
+export default function MainController(AuthService, $state) {
   "ngInject";
   var main = this;
 
   main.message = null;
   main.error = null;
 
-  main.loginUser = function(user) {
-    AuthService.loginUser(user);
+  main.registerUser = function(user) {
+    AuthService.registerUser(user)
+    .then(function(res) {
+      console.log('User Registered Successfully!');
+      console.log(res);
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
   };
 
-  main.registerUser = function(user) {
-    AuthService.registerUser(user);
+  main.loginUser = function(user) {
+    AuthService.loginUser(user)
+    .then(function(res) {
+      console.log('User Logged In Successfully! -- Using Email/Password');
+      console.log(res);
+
+      $state.go('home');
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
+  };
+
+  main.oauthUserLogin = function(provider) {
+    let Provider = provider + 'Provider';
+    AuthService.oauthUserLogin(Provider)
+    .then(function(res) {
+      console.log('User Logged In Successfully! -- Using ' + provider);
+      console.log(res);
+      
+      $state.go('home');
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
   };
 
   main.logoutUser = function() {
@@ -21,9 +51,4 @@ export default function MainController(AuthService) {
     AuthService.deleteUser(user);
   };
 
-  main.oauthUserLogin = function(provider) {
-    let Provider = provider + 'Provider';
-    AuthService.oauthUserLogin(Provider);
-  };
-  
 }
