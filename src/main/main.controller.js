@@ -22,7 +22,7 @@ export default function MainController(AuthService, $state) {
       console.log('User Logged In Successfully! -- Using Email/Password');
       console.log(res);
 
-      $state.go('home');
+      $state.go('home.search');
     })
     .catch(function(err) {
       console.log(err);
@@ -35,7 +35,7 @@ export default function MainController(AuthService, $state) {
     .then(function(res) {
       console.log('User Logged In Successfully! -- Using ' + provider);
       console.log(res);
-      
+
       $state.go('home');
     })
     .catch(function(err) {

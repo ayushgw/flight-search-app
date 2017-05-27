@@ -11,10 +11,11 @@ import EnableUIRouterErrors from './app.run';
 
 import main from './main/main.module';
 import home from './home/home.module';
-import results from './results/results.module';
+import search from './home.search/search.module';
+import results from './home.results/results.module';
 import Data from './Data/Data.module';
 
 
-angular.module('app', [nganimate, uirouter, main, home, results, Data])
+angular.module('app', [nganimate, uirouter, main, home, search, results, Data])
 .config(Routes)
 .run(EnableUIRouterErrors);

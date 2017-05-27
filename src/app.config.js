@@ -12,14 +12,23 @@ export default function RoutesConfig($locationProvider, $urlRouterProvider, $sta
     controllerAs: 'main'
   })
   .state('home', {
+    abstract: true, //to load a default nested state in state.child declaration
     url: '/home',
     template: require('./home/home.template.html'),
     controller: 'HomeController',
     controllerAs: 'home'
   })
-  .state('results', {
+  .state('home.search', {
+    // parent: 'home',
+    url: '/search',
+    template: require('./home.search/search.template.html'),
+    controller: 'SearchController',
+    controllerAs: 'search'
+  })
+  .state('home.results', {
+    // parent: 'home',
     url: '/results',
-    template: require('./results/results.template.html'),
+    template: require('./home.results/results.template.html'),
     controller: 'ResultsController',
     controllerAs: 'results'
   })
