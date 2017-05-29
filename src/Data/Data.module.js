@@ -4,6 +4,7 @@ import config from './Data.config';
 import AuthInit from './services/auth.init';
 import AuthService from './services/auth.service';
 import FlightsService from './services/flights.service';
+import IataCodesService from './services/iatacodes.service';
 
 
 export default angular.module('Data', [])
@@ -11,6 +12,7 @@ export default angular.module('Data', [])
 .factory('AuthInit', AuthInit)
 .service('AuthService', AuthService)
 .service('FlightsService', FlightsService)
-.constant('FLIGHTS_APIBASE', 'https://api.sandbox.amadeus.com/v1.2/flights/extensive-search')
-// .constant('IATA_APIBASE', '/')
+.service('IataCodesService', IataCodesService)
+.constant('IATA_APIBASE', 'http://iatacodes.org/api/v6/airports')
+.constant('FLIGHTS_APIBASE', 'http://developer.goibibo.com/api/search/')
 .name;

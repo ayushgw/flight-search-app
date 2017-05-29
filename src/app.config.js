@@ -23,7 +23,14 @@ export default function RoutesConfig($locationProvider, $urlRouterProvider, $sta
     url: '/search',
     template: require('./home.search/search.template.html'),
     controller: 'SearchController',
-    controllerAs: 'search'
+    controllerAs: 'search',
+    resolve: {
+      IATACODES: function(IataCodesService) {
+        "ngInject";
+        var iataCodes = IataCodesService.getIataCodes();
+        return iataCodes;
+      }
+    }
   })
   .state('home.results', {
     // parent: 'home',

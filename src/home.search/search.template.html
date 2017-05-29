@@ -1,5 +1,101 @@
 <div class="search">
-  <h3>Search</h3>
+  <h3 class="text-center">Search</h3>
 
-  
+  <md-content class="md-padding">
+    <form ng-submit="$event.preventDefault()">
+      <div layout-gt-sm="row" layout="column">
+        <div flex-gt-sm="40">
+          <md-autocomplete
+          md-selected-item="search.source"
+          md-search-text="search.searchSource"
+          md-items="item in search.searchAirport(search.searchSource)"
+          md-item-text="item.name"
+          md-min-length="0"
+          placeholder="Enter Departure City">
+          <md-item-template>
+            <span md-highlight-text="search.searchSource" md-highlight-flags="^i">{{item.name}} ({{item.code}})</span>
+          </md-item-template>
+          <md-not-found>
+            No airports matching "{{search.searchSource}}" were found.
+          </md-not-found>
+        </md-autocomplete>
+      </div>
+
+      <div flex-gt-sm="20" class="text-center">
+        <button ng-click="search.interchangeSearchCities()">do</button>
+        <img src="../Data/images/arrow-right-bold-circle-outline.png" alt="">
+      </div>
+
+      <div flex-gt-sm="40">
+        <md-autocomplete
+        md-selected-item="search.destination"
+        md-search-text="search.searchDestination"
+        md-items="item in search.searchAirport(search.searchDestination)"
+        md-item-text="item.name"
+        md-min-length="0"
+        placeholder="Enter Departure City">
+        <md-item-template>
+          <span md-highlight-text="search.searchDestination" md-highlight-flags="^i">{{item.name}} ({{item.code}})</span>
+        </md-item-template>
+        <md-not-found>
+          No airports matching "{{search.searchDestination}}" were found.
+        </md-not-found>
+      </md-autocomplete>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div layout="row" layout-align="center">
+    <md-datepicker ng-model="search.myDate" md-placeholder="Select Date of Departure" md-min-date="search.minDate" md-max-date="search.maxDate"></md-datepicker>
+  </div>
+
+  <br>
+
+  <div layout-gt-sm="row" layout="column" ng-init="numberOfPeople = [0,1,2,3,4,5,6,7,8,9]">
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>Class</label>
+      <md-select ng-model="search.class">
+        <md-option value="E">Economy</md-option>
+        <md-option value="B">Business</md-option>
+      </md-select>
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>Adults</label>
+      <md-select ng-model="search.people.adults">
+        <md-option ng-repeat="number in numberOfPeople" value="{{number}}">{{number}}</md-option>
+      </md-select>
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>Children</label>
+      <md-select ng-model="search.people.children">
+        <md-option value="E">Economy</md-option>
+        <md-option value="B">Business</md-option>
+      </md-select>
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>Infants</label>
+      <md-select ng-model="search.people.infants">
+        <md-option value="E">Economy</md-option>
+        <md-option value="B">Business</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <br>
+
+  <div layout="row" layout-align="center">
+    <md-input-container class="md-block">
+      <md-switch class="md-primary" name="counter" ng-model="search.counter">
+        Is this a International Flight?
+      </md-switch>
+    </md-input-container>
+  </div>
+
+  <div layout="row" layout-align="center">
+    <button class="btn btn_search">Search</button>
+  </div>
+</form>
+</md-content>
+
 </div>

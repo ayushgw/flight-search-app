@@ -1,0 +1,28 @@
+md-content {
+  background-color: transparent;
+}
+.md-datepicker-input {
+  width: 240px;
+}
+.md-autocomplete-suggestions-container li .highlight {
+  color: red;
+}
+md-icon {
+  color: #4B7796 !important;
+}
+
+.btn_search {
+  width: 150px;
+  margin: 30px;
+  color: #4B7796 !important;
+  padding: 10px !important;
+  border: 1px solid #4B7796 !important;
+  background-color: transparent !important;
+  transition: 0.3s all;
+}
+.btn_search:hover {
+  font-weight: bold;
+  background-color: white !important;
+  color: #4B7796 !important;
+  border: 1px solid transparent !important;
+}

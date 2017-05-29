@@ -6,7 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 const PRODUCTION = process.env.NODE_ENV === 'production';
-const VENDOR_LIBS = ['angular', 'angular-ui-router', 'jquery', 'bootstrap-loader'];
+const VENDOR_LIBS = ['angular', 'angular-material', 'angular-ui-router', 'jquery', 'bootstrap-loader'];
 
 const PLUGINS = [
   new ngAnnotatePlugin({ add: true }),
@@ -82,7 +82,8 @@ const config = {
           'css-loader',
           'postcss-loader'
         ]),
-        exclude: /node_modules/
+        // exclude: /node_modules/,
+        // include: [ path.resolve(__dirname, '/node_modules/angucomplete-alt/angucomplete-alt.css') ],
       },
       {
         test: /\.html$/,
