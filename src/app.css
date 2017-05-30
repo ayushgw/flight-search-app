@@ -9,6 +9,7 @@ body {
   flex-flow: column;
   margin: 0;
   height: 100vh;
+  background: linear-gradient(140deg, #6DB7ED 10%, #FF926B 90%);
   background-repeat: no-repeat;
 }
 .row {

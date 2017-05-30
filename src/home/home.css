@@ -1,7 +1,7 @@
 .home {
-  background-color: #6DB7ED;
-  background: linear-gradient(20deg, #fff 0%, #6DB7ED 51%, #6DB7ED 85%);
+  /*background: linear-gradient(140deg, #6DB7ED 10%, #FF926B 90%);
+  background-color: #6DB7ED;*/
   color: #000;
   flex: 1 1 auto;
-  padding: 100px;
+  padding-top: 90px;
 }

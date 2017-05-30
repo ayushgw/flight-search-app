@@ -11,6 +11,9 @@ md-icon {
   color: #4B7796 !important;
 }
 
+.search h2 {
+  color: #4B7796;
+}
 .btn_search {
   width: 150px;
   margin: 30px;
@@ -25,4 +28,14 @@ md-icon {
   background-color: white !important;
   color: #4B7796 !important;
   border: 1px solid transparent !important;
+}
+
+.btn_swap {
+  background-color: transparent;
+  border: 1px solid white !important;
+  transition: 0.3s all;
+}
+.btn_swap:hover {
+  border: 1px solid transparent !important;
+  background-color: rgba(9, 9, 9, 0.2);
 }

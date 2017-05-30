@@ -1,5 +1,6 @@
 import angular from 'angular';
 
+
 import config from './Data.config';
 import AuthInit from './services/auth.init';
 import AuthService from './services/auth.service';

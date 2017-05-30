@@ -19,7 +19,6 @@ export default function RoutesConfig($locationProvider, $urlRouterProvider, $sta
     controllerAs: 'home'
   })
   .state('home.search', {
-    // parent: 'home',
     url: '/search',
     template: require('./home.search/search.template.html'),
     controller: 'SearchController',
@@ -33,11 +32,19 @@ export default function RoutesConfig($locationProvider, $urlRouterProvider, $sta
     }
   })
   .state('home.results', {
-    // parent: 'home',
-    url: '/results',
+    url: '/results?source&destination&dateofdeparture&seatingclass&adults&children&infants&counter',
     template: require('./home.results/results.template.html'),
     controller: 'ResultsController',
-    controllerAs: 'results'
+    controllerAs: 'results',
+    resolve: {
+      FLIGHTSDATA: function($stateParams, FlightsService) {
+        "ngInject";
+
+        var flightparams = $stateParams;
+        var flightsdata = FlightsService.getFlights(flightparams);
+        return flightsdata;
+      }
+    }
   })
   ;
 }

@@ -9,7 +9,6 @@ export default function IataCodesService(IATA_APIBASE, $http) {
   service.getIataCodes = function() {
     var iataCodes = $http.get(IATA_APIBASE, { params })
     .then(function(result) {
-      console.log(result);
       return result;
     })
     .catch(function(error) {
