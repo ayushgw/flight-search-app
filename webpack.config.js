@@ -6,7 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 const PRODUCTION = process.env.NODE_ENV === 'production';
-const VENDOR_LIBS = ['angular', 'angular-material', 'angular-ui-router', 'jquery', 'bootstrap-loader'];
+const VENDOR_LIBS = ['angular', 'angular-material', 'angular-ui-router', 'jquery', 'bootstrap-loader', 'angular-utils-pagination'];
 
 const PLUGINS = [
   new ngAnnotatePlugin({ add: true }),

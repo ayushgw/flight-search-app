@@ -113,6 +113,10 @@ angular-ui-router@^1.0.3:
   dependencies:
     "@uirouter/core" "5.0.3"
 
+angular-utils-pagination@^0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/angular-utils-pagination/-/angular-utils-pagination-0.11.1.tgz#efad7c8879beb30ad3d77707f93e3d0ef51f2c66"
+
 angular@^1.6.4:
   version "1.6.4"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.6.4.tgz#03b7b15c01a0802d7e2cf593240e604054dc77fb"
