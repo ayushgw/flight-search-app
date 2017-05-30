@@ -1,0 +1,1782 @@
+[
+    {
+        "cityname": "Aberdeen, SD",
+        "iatacode": "ABR"
+    },
+    {
+        "cityname": "Abilene, TX",
+        "iatacode": "ABI"
+    },
+    {
+        "cityname": "Akron, OH",
+        "iatacode": "CAK"
+    },
+    {
+        "cityname": "Alamosa, CO",
+        "iatacode": "ALS"
+    },
+    {
+        "cityname": "Albany, GA",
+        "iatacode": "ABY"
+    },
+    {
+        "cityname": "Albany, NY",
+        "iatacode": "ALB"
+    },
+    {
+        "cityname": "Albuquerque, NM",
+        "iatacode": "ABQ"
+    },
+    {
+        "cityname": "Alexandria, LA",
+        "iatacode": "AEX"
+    },
+    {
+        "cityname": "Allentown, PA",
+        "iatacode": "ABE"
+    },
+    {
+        "cityname": "Alliance, NE",
+        "iatacode": "AIA"
+    },
+    {
+        "cityname": "Alpena, MI",
+        "iatacode": "APN"
+    },
+    {
+        "cityname": "Altoona, PA",
+        "iatacode": "AOO"
+    },
+    {
+        "cityname": "Amarillo, TX",
+        "iatacode": "AMA"
+    },
+    {
+        "cityname": "Anchorage, AK",
+        "iatacode": "ANC"
+    },
+    {
+        "cityname": "Appleton, WI",
+        "iatacode": "ATW"
+    },
+    {
+        "cityname": "Asheville, NC",
+        "iatacode": "AVL"
+    },
+    {
+        "cityname": "Aspen, CO",
+        "iatacode": "ASE"
+    },
+    {
+        "cityname": "Athens, GA",
+        "iatacode": "AHN"
+    },
+    {
+        "cityname": "Atlanta, GA",
+        "iatacode": "ATL"
+    },
+    {
+        "cityname": "Atlantic City, NJ",
+        "iatacode": "ACY"
+    },
+    {
+        "cityname": "Augusta, GA",
+        "iatacode": "AGS"
+    },
+    {
+        "cityname": "Augusta, ME",
+        "iatacode": "AUG"
+    },
+    {
+        "cityname": "Austin, TX",
+        "iatacode": "AUS"
+    },
+    {
+        "cityname": "Bakersfield, CA",
+        "iatacode": "BFL"
+    },
+    {
+        "cityname": "Baltimore, MD",
+        "iatacode": "BWI"
+    },
+    {
+        "cityname": "Bangor, ME",
+        "iatacode": "BGR"
+    },
+    {
+        "cityname": "Bar Harbor, ME",
+        "iatacode": "BHB"
+    },
+    {
+        "cityname": "Barrow, AK",
+        "iatacode": "BRW"
+    },
+    {
+        "cityname": "Baton Rouge, LA",
+        "iatacode": "BTR"
+    },
+    {
+        "cityname": "Beaumont, TX",
+        "iatacode": "BPT"
+    },
+    {
+        "cityname": "Beckley, WV",
+        "iatacode": "BKW"
+    },
+    {
+        "cityname": "Bedford, MA",
+        "iatacode": "BED"
+    },
+    {
+        "cityname": "Bellingham, WA",
+        "iatacode": "BLI"
+    },
+    {
+        "cityname": "Bemidji, MN",
+        "iatacode": "BJI"
+    },
+    {
+        "cityname": "Bethel, AK",
+        "iatacode": "BET"
+    },
+    {
+        "cityname": "Bettles, AK",
+        "iatacode": "BTT"
+    },
+    {
+        "cityname": "Billings, MT",
+        "iatacode": "BIL"
+    },
+    {
+        "cityname": "Binghamton, NY",
+        "iatacode": "BGM"
+    },
+    {
+        "cityname": "Birmingham, AL",
+        "iatacode": "BHM"
+    },
+    {
+        "cityname": "Bismarck, ND",
+        "iatacode": "BIS"
+    },
+    {
+        "cityname": "Bloomington, IL",
+        "iatacode": "BMI"
+    },
+    {
+        "cityname": "Bloomington, IN",
+        "iatacode": "BMG"
+    },
+    {
+        "cityname": "Bluefield, WV",
+        "iatacode": "BLF"
+    },
+    {
+        "cityname": "Boise, ID",
+        "iatacode": "BOI"
+    },
+    {
+        "cityname": "Boston, MA",
+        "iatacode": "BOS"
+    },
+    {
+        "cityname": "Bozeman, MT",
+        "iatacode": "BZN"
+    },
+    {
+        "cityname": "Brookings, SD",
+        "iatacode": "BKX"
+    },
+    {
+        "cityname": "Brownsville, TX",
+        "iatacode": "BRO"
+    },
+    {
+        "cityname": "Brunswick, GA",
+        "iatacode": "BQK"
+    },
+    {
+        "cityname": "Buffalo, NY",
+        "iatacode": "BUF"
+    },
+    {
+        "cityname": "Burbank, CA",
+        "iatacode": "BUR"
+    },
+    {
+        "cityname": "Burlington, IA",
+        "iatacode": "BRL"
+    },
+    {
+        "cityname": "Burlington, MA",
+        "iatacode": "BBF"
+    },
+    {
+        "cityname": "Burlington, VT",
+        "iatacode": "BTV"
+    },
+    {
+        "cityname": "Butte, MT",
+        "iatacode": "BTM"
+    },
+    {
+        "cityname": "Cape Girardeau, MO",
+        "iatacode": "CGI"
+    },
+    {
+        "cityname": "Carlsbad, CA",
+        "iatacode": "CLD"
+    },
+    {
+        "cityname": "Carlsbad, NM",
+        "iatacode": "CNM"
+    },
+    {
+        "cityname": "Casper, WY",
+        "iatacode": "CPR"
+    },
+    {
+        "cityname": "Cedar Rapids, IA",
+        "iatacode": "CID"
+    },
+    {
+        "cityname": "Champaign, IL",
+        "iatacode": "CMI"
+    },
+    {
+        "cityname": "Charleston, SC",
+        "iatacode": "CHS"
+    },
+    {
+        "cityname": "Charleston, WV",
+        "iatacode": "CRW"
+    },
+    {
+        "cityname": "Charlotte, NC",
+        "iatacode": "CLT"
+    },
+    {
+        "cityname": "Charlottesville, VA",
+        "iatacode": "CHO"
+    },
+    {
+        "cityname": "Chattanooga, TN",
+        "iatacode": "CHA"
+    },
+    {
+        "cityname": "Cheyenne, WY",
+        "iatacode": "CYS"
+    },
+    {
+        "cityname": "Chicago, IL",
+        "iatacode": "MDW"
+    },
+    {
+        "cityname": "Chicago, IL",
+        "iatacode": "ORD"
+    },
+    {
+        "cityname": "Chicago, IL",
+        "iatacode": "CHI - All Airports"
+    },
+    {
+        "cityname": "Chico, CA",
+        "iatacode": "CIC"
+    },
+    {
+        "cityname": "Cincinnati, OH",
+        "iatacode": "CVG"
+    },
+    {
+        "cityname": "Clarksburg, WV",
+        "iatacode": "CKB"
+    },
+    {
+        "cityname": "Cleveland, OH",
+        "iatacode": "CLE"
+    },
+    {
+        "cityname": "Clovis, NM",
+        "iatacode": "CVN"
+    },
+    {
+        "cityname": "Cody, WY",
+        "iatacode": "COD"
+    },
+    {
+        "cityname": "College Station, TX",
+        "iatacode": "CLL"
+    },
+    {
+        "cityname": "Colorado Springs, CO",
+        "iatacode": "COS"
+    },
+    {
+        "cityname": "Columbia, MO",
+        "iatacode": "COU"
+    },
+    {
+        "cityname": "Columbia, SC",
+        "iatacode": "CAE"
+    },
+    {
+        "cityname": "Columbus, GA",
+        "iatacode": "CSG"
+    },
+    {
+        "cityname": "Columbus, IN",
+        "iatacode": "CLU"
+    },
+    {
+        "cityname": "Columbus, MS",
+        "iatacode": "GTR"
+    },
+    {
+        "cityname": "Columbus, NE",
+        "iatacode": "OLU"
+    },
+    {
+        "cityname": "Columbus, OH",
+        "iatacode": "CMH"
+    },
+    {
+        "cityname": "Cordova, AK",
+        "iatacode": "CDV"
+    },
+    {
+        "cityname": "Corpus Christi, TX",
+        "iatacode": "CRP"
+    },
+    {
+        "cityname": "Dallas, TX",
+        "iatacode": "DFW"
+    },
+    {
+        "cityname": "Dallas, TX",
+        "iatacode": "DAL"
+    },
+    {
+        "cityname": "Dayton, OH",
+        "iatacode": "DAY"
+    },
+    {
+        "cityname": "Daytona Beach, FL",
+        "iatacode": "DAB"
+    },
+    {
+        "cityname": "Decatur, IL",
+        "iatacode": "DEC"
+    },
+    {
+        "cityname": "Denver, CO",
+        "iatacode": "DEN"
+    },
+    {
+        "cityname": "Des Moines, IA",
+        "iatacode": "DSM"
+    },
+    {
+        "cityname": "Detroit, MI",
+        "iatacode": "DTW"
+    },
+    {
+        "cityname": "Detroit, MI",
+        "iatacode": "DTT - All Airports"
+    },
+    {
+        "cityname": "Devils Lake, ND",
+        "iatacode": "DVL"
+    },
+    {
+        "cityname": "Dickinson, ND",
+        "iatacode": "DIK"
+    },
+    {
+        "cityname": "Dillingham, AK",
+        "iatacode": "DLG"
+    },
+    {
+        "cityname": "Dodge City, KS",
+        "iatacode": "DDC"
+    },
+    {
+        "cityname": "Dothan, AL",
+        "iatacode": "DHN"
+    },
+    {
+        "cityname": "Du Bois, PA",
+        "iatacode": "DUJ"
+    },
+    {
+        "cityname": "Dubuque, IA",
+        "iatacode": "DBQ"
+    },
+    {
+        "cityname": "Duluth, MN",
+        "iatacode": "DLH"
+    },
+    {
+        "cityname": "Durango, CO",
+        "iatacode": "DRO"
+    },
+    {
+        "cityname": "Dutch Harbor, Un Island, AK",
+        "iatacode": "DUT"
+    },
+    {
+        "cityname": "Eau Claire, WI",
+        "iatacode": "EAU"
+    },
+    {
+        "cityname": "Eek, AK",
+        "iatacode": "EEK"
+    },
+    {
+        "cityname": "El Centro, CA",
+        "iatacode": "IPL"
+    },
+    {
+        "cityname": "El Dorado, AR",
+        "iatacode": "ELD"
+    },
+    {
+        "cityname": "El Paso, TX",
+        "iatacode": "ELP"
+    },
+    {
+        "cityname": "Elko, NV",
+        "iatacode": "EKO"
+    },
+    {
+        "cityname": "Elmira, NY",
+        "iatacode": "ELM"
+    },
+    {
+        "cityname": "Enid, OK",
+        "iatacode": "WDG"
+    },
+    {
+        "cityname": "Erie, PA",
+        "iatacode": "ERI"
+    },
+    {
+        "cityname": "Escanaba, MI",
+        "iatacode": "ESC"
+    },
+    {
+        "cityname": "Eugene, OR",
+        "iatacode": "EUG"
+    },
+    {
+        "cityname": "Eureka, CA",
+        "iatacode": "ACV"
+    },
+    {
+        "cityname": "Evansville, IN",
+        "iatacode": "EVV"
+    },
+    {
+        "cityname": "Fairbanks, AK",
+        "iatacode": "FAI"
+    },
+    {
+        "cityname": "Fargo, ND",
+        "iatacode": "FAR"
+    },
+    {
+        "cityname": "Farmington, NM",
+        "iatacode": "FMN"
+    },
+    {
+        "cityname": "Fayetteville, AR",
+        "iatacode": "XNA"
+    },
+    {
+        "cityname": "Fayetteville, NC",
+        "iatacode": "FAY"
+    },
+    {
+        "cityname": "Flagstaff, AZ",
+        "iatacode": "FLG"
+    },
+    {
+        "cityname": "Flint, MI",
+        "iatacode": "FNT"
+    },
+    {
+        "cityname": "Florence, SC",
+        "iatacode": "FLO"
+    },
+    {
+        "cityname": "Fort Dodge, IA",
+        "iatacode": "FOD"
+    },
+    {
+        "cityname": "Fort Lauderdale, FL",
+        "iatacode": "FLL"
+    },
+    {
+        "cityname": "Fort Leonard Wood, MO",
+        "iatacode": "TBN"
+    },
+    {
+        "cityname": "Fort Myers, FL",
+        "iatacode": "RSW"
+    },
+    {
+        "cityname": "Fort Smith, AR",
+        "iatacode": "FSM"
+    },
+    {
+        "cityname": "Fort Walton Beach, FL",
+        "iatacode": "VPS"
+    },
+    {
+        "cityname": "Fort Wayne, IN",
+        "iatacode": "FWA"
+    },
+    {
+        "cityname": "Fort Yukon, AK",
+        "iatacode": "FYU"
+    },
+    {
+        "cityname": "Fresno, CA",
+        "iatacode": "FAT"
+    },
+    {
+        "cityname": "Gainesville, FL",
+        "iatacode": "GNV"
+    },
+    {
+        "cityname": "Garden City, KS",
+        "iatacode": "GCK"
+    },
+    {
+        "cityname": "Gillette, WY",
+        "iatacode": "GCC"
+    },
+    {
+        "cityname": "Glendive, MT",
+        "iatacode": "GDV"
+    },
+    {
+        "cityname": "Grand Forks, ND",
+        "iatacode": "GFK"
+    },
+    {
+        "cityname": "Grand Island, NE",
+        "iatacode": "GRI"
+    },
+    {
+        "cityname": "Grand Junction, CO",
+        "iatacode": "GJT"
+    },
+    {
+        "cityname": "Grand Rapids, MI",
+        "iatacode": "GRR"
+    },
+    {
+        "cityname": "Great Bend, KS",
+        "iatacode": "GBD"
+    },
+    {
+        "cityname": "Great Falls, MT",
+        "iatacode": "GTF"
+    },
+    {
+        "cityname": "Green Bay, WI",
+        "iatacode": "GRB"
+    },
+    {
+        "cityname": "Greenbrier, WV",
+        "iatacode": "LWB"
+    },
+    {
+        "cityname": "Greensboro, NC",
+        "iatacode": "GSO"
+    },
+    {
+        "cityname": "Greenville, MS",
+        "iatacode": "GLH"
+    },
+    {
+        "cityname": "Greenville, NC",
+        "iatacode": "PGV"
+    },
+    {
+        "cityname": "Greenville, SC",
+        "iatacode": "GSP"
+    },
+    {
+        "cityname": "Gulfport, MS",
+        "iatacode": "GPT"
+    },
+    {
+        "cityname": "Gunnison, CO",
+        "iatacode": "GUC"
+    },
+    {
+        "cityname": "Hagerstown, MD",
+        "iatacode": "HGR"
+    },
+    {
+        "cityname": "Hana, Maui, HI",
+        "iatacode": "HNM"
+    },
+    {
+        "cityname": "Hancock, MI",
+        "iatacode": "CMX"
+    },
+    {
+        "cityname": "Harlingen, TX",
+        "iatacode": "HRL"
+    },
+    {
+        "cityname": "Harrisburg, PA",
+        "iatacode": "MDT"
+    },
+    {
+        "cityname": "Harrison, AR",
+        "iatacode": "HRO"
+    },
+    {
+        "cityname": "Hartford, CT",
+        "iatacode": "BDL"
+    },
+    {
+        "cityname": "Havre, MT",
+        "iatacode": "HVR"
+    },
+    {
+        "cityname": "Hays, KS",
+        "iatacode": "HYS"
+    },
+    {
+        "cityname": "Helena, MT",
+        "iatacode": "HLN"
+    },
+    {
+        "cityname": "Hibbing, MN",
+        "iatacode": "HIB"
+    },
+    {
+        "cityname": "Hilo, Hawaii",
+        "iatacode": "Big"
+    },
+    {
+        "cityname": "Hilton Head Island, SC",
+        "iatacode": "HHH"
+    },
+    {
+        "cityname": "Hobbs, NM",
+        "iatacode": "HOB"
+    },
+    {
+        "cityname": "Homer, AK",
+        "iatacode": "HOM"
+    },
+    {
+        "cityname": "Honolulu, Oahu, HI",
+        "iatacode": "HNL"
+    },
+    {
+        "cityname": "Hoolehua, Molokai, HI",
+        "iatacode": "MKK"
+    },
+    {
+        "cityname": "Hot Springs, AR",
+        "iatacode": "HOT"
+    },
+    {
+        "cityname": "Houston, TX",
+        "iatacode": "IAH"
+    },
+    {
+        "cityname": "Houston, TX",
+        "iatacode": "HOU"
+    },
+    {
+        "cityname": "Houston, TX",
+        "iatacode": "EFD"
+    },
+    {
+        "cityname": "Huntington, WV",
+        "iatacode": "HTS"
+    },
+    {
+        "cityname": "Huntsville, AL",
+        "iatacode": "HSV"
+    },
+    {
+        "cityname": "Huron, SD",
+        "iatacode": "HON"
+    },
+    {
+        "cityname": "Hyannis, MA",
+        "iatacode": "HYA"
+    },
+    {
+        "cityname": "Idaho Falls, ID",
+        "iatacode": "IDA"
+    },
+    {
+        "cityname": "Indianapolis, IN",
+        "iatacode": "IND"
+    },
+    {
+        "cityname": "International Falls, MN",
+        "iatacode": "INL"
+    },
+    {
+        "cityname": "Inyokern, CA",
+        "iatacode": "IYK"
+    },
+    {
+        "cityname": "Iron Mountain, MI",
+        "iatacode": "IMT"
+    },
+    {
+        "cityname": "Ironwood, MI",
+        "iatacode": "IWD"
+    },
+    {
+        "cityname": "Islip, NY",
+        "iatacode": "ISP"
+    },
+    {
+        "cityname": "Ithaca, NY",
+        "iatacode": "ITH"
+    },
+    {
+        "cityname": "Jackson Hole, WY",
+        "iatacode": "JAC"
+    },
+    {
+        "cityname": "Jackson, MS",
+        "iatacode": "JAN"
+    },
+    {
+        "cityname": "Jackson, TN",
+        "iatacode": "MKL"
+    },
+    {
+        "cityname": "Jacksonville, FL",
+        "iatacode": "JAX"
+    },
+    {
+        "cityname": "Jacksonville, NC",
+        "iatacode": "OAJ"
+    },
+    {
+        "cityname": "Jamestown, ND",
+        "iatacode": "JMS"
+    },
+    {
+        "cityname": "Jamestown, NY",
+        "iatacode": "JHW"
+    },
+    {
+        "cityname": "Johnstown, PA",
+        "iatacode": "JST"
+    },
+    {
+        "cityname": "Jonesboro, AR",
+        "iatacode": "JBR"
+    },
+    {
+        "cityname": "Joplin, MO",
+        "iatacode": "JLN"
+    },
+    {
+        "cityname": "Juneau, AK",
+        "iatacode": "JNU"
+    },
+    {
+        "cityname": "Kahului, Maui, HI",
+        "iatacode": "OGG"
+    },
+    {
+        "cityname": "Kailua-Kona, Hawaii",
+        "iatacode": "Big"
+    },
+    {
+        "cityname": "Kalamazoo, MI",
+        "iatacode": "AZO"
+    },
+    {
+        "cityname": "Kalaupapa, Molokai, HI",
+        "iatacode": "LUP"
+    },
+    {
+        "cityname": "Kalispell, MT",
+        "iatacode": "FCA"
+    },
+    {
+        "cityname": "Kamuela, Hawaii",
+        "iatacode": "Big"
+    },
+    {
+        "cityname": "Kansas City, MO",
+        "iatacode": "MCI"
+    },
+    {
+        "cityname": "Kapalua, Maui, HI",
+        "iatacode": "JHM"
+    },
+    {
+        "cityname": "Kearney, NE",
+        "iatacode": "EAR"
+    },
+    {
+        "cityname": "Kenai, AK",
+        "iatacode": "ENA"
+    },
+    {
+        "cityname": "Ketchikan, AK",
+        "iatacode": "KTN"
+    },
+    {
+        "cityname": "Key West, FL",
+        "iatacode": "EYW"
+    },
+    {
+        "cityname": "Killeen, TX",
+        "iatacode": "GRK"
+    },
+    {
+        "cityname": "King Salmon, AK",
+        "iatacode": "AKN"
+    },
+    {
+        "cityname": "Kingman, AZ",
+        "iatacode": "IGM"
+    },
+    {
+        "cityname": "Kirksville, MO",
+        "iatacode": "IRK"
+    },
+    {
+        "cityname": "Klamath Falls, OR",
+        "iatacode": "LMT"
+    },
+    {
+        "cityname": "Knoxville, TN",
+        "iatacode": "TYS"
+    },
+    {
+        "cityname": "Kodiak, AK",
+        "iatacode": "ADQ"
+    },
+    {
+        "cityname": "La Crosse, WI",
+        "iatacode": "LSE"
+    },
+    {
+        "cityname": "Lafayette, LA",
+        "iatacode": "LFT"
+    },
+    {
+        "cityname": "Lake Charles, LA",
+        "iatacode": "LCH"
+    },
+    {
+        "cityname": "Lake Havasu City, AZ",
+        "iatacode": "HII"
+    },
+    {
+        "cityname": "Lanai City, Lanai, HI",
+        "iatacode": "LNY"
+    },
+    {
+        "cityname": "Lancaster, PA",
+        "iatacode": "LNS"
+    },
+    {
+        "cityname": "Lansing, MI",
+        "iatacode": "LAN"
+    },
+    {
+        "cityname": "Laramie, WY",
+        "iatacode": "LAR"
+    },
+    {
+        "cityname": "Laredo, TX",
+        "iatacode": "LRD"
+    },
+    {
+        "cityname": "Las Cruces, NM",
+        "iatacode": "LRU"
+    },
+    {
+        "cityname": "Las Vegas, NV",
+        "iatacode": "LAS"
+    },
+    {
+        "cityname": "Latrobe, PA",
+        "iatacode": "LBE"
+    },
+    {
+        "cityname": "Laurel, MS",
+        "iatacode": "PIB"
+    },
+    {
+        "cityname": "Lawton, OK",
+        "iatacode": "LAW"
+    },
+    {
+        "cityname": "Lebanon, NH",
+        "iatacode": "LEB"
+    },
+    {
+        "cityname": "Lewiston, ID",
+        "iatacode": "LWS"
+    },
+    {
+        "cityname": "Lewiston, ME",
+        "iatacode": "LEW"
+    },
+    {
+        "cityname": "Lewistown, MT",
+        "iatacode": "LWT"
+    },
+    {
+        "cityname": "Lexington, KY",
+        "iatacode": "LEX"
+    },
+    {
+        "cityname": "Liberal, KS",
+        "iatacode": "LBL"
+    },
+    {
+        "cityname": "Lihue, Kauai, HI",
+        "iatacode": "LIH"
+    },
+    {
+        "cityname": "Lincoln, NE",
+        "iatacode": "LNK"
+    },
+    {
+        "cityname": "Little Rock, AR",
+        "iatacode": "LIT"
+    },
+    {
+        "cityname": "Long Beach, CA",
+        "iatacode": "LGB"
+    },
+    {
+        "cityname": "Longview, TX",
+        "iatacode": "GGG"
+    },
+    {
+        "cityname": "Los Angeles, CA",
+        "iatacode": "QLA - All Airports"
+    },
+    {
+        "cityname": "Los Angeles, CA",
+        "iatacode": "LAX"
+    },
+    {
+        "cityname": "Louisville, KY, USA",
+        "iatacode": "SDF"
+    },
+    {
+        "cityname": "Lubbock, TX",
+        "iatacode": "LBB"
+    },
+    {
+        "cityname": "Lynchburg, VA",
+        "iatacode": "LYH"
+    },
+    {
+        "cityname": "Macon, GA",
+        "iatacode": "MCN"
+    },
+    {
+        "cityname": "Madison, WI",
+        "iatacode": "MSN"
+    },
+    {
+        "cityname": "Manchester, NH",
+        "iatacode": "MHT"
+    },
+    {
+        "cityname": "Manhattan, KS",
+        "iatacode": "MHK"
+    },
+    {
+        "cityname": "Manistee, MI",
+        "iatacode": "MBL"
+    },
+    {
+        "cityname": "Marion, IL",
+        "iatacode": "MWA"
+    },
+    {
+        "cityname": "Marquette, MI",
+        "iatacode": "MQT"
+    },
+    {
+        "cityname": "Martha's Vineyard, MA",
+        "iatacode": "MVY"
+    },
+    {
+        "cityname": "Mason City, IA",
+        "iatacode": "MCW"
+    },
+    {
+        "cityname": "Massena, NY",
+        "iatacode": "MSS"
+    },
+    {
+        "cityname": "McAllen, TX",
+        "iatacode": "MFE"
+    },
+    {
+        "cityname": "McCook, NE",
+        "iatacode": "MCK"
+    },
+    {
+        "cityname": "Medford, OR",
+        "iatacode": "MFR"
+    },
+    {
+        "cityname": "Melbourne, FL",
+        "iatacode": "MLB"
+    },
+    {
+        "cityname": "Memphis, TN",
+        "iatacode": "MEM"
+    },
+    {
+        "cityname": "Meridian, MS",
+        "iatacode": "MEI"
+    },
+    {
+        "cityname": "Miami, FL",
+        "iatacode": "MIA"
+    },
+    {
+        "cityname": "Midland, TX",
+        "iatacode": "MAF"
+    },
+    {
+        "cityname": "Miles City, MT",
+        "iatacode": "MLS"
+    },
+    {
+        "cityname": "Milwaukee, WI",
+        "iatacode": "MKE"
+    },
+    {
+        "cityname": "Minneapolis, MN",
+        "iatacode": "MSP"
+    },
+    {
+        "cityname": "Minot, ND",
+        "iatacode": "MOT"
+    },
+    {
+        "cityname": "Missoula, MT",
+        "iatacode": "MSO"
+    },
+    {
+        "cityname": "Mobile, AL",
+        "iatacode": "MOB"
+    },
+    {
+        "cityname": "Modesto, CA",
+        "iatacode": "MOD"
+    },
+    {
+        "cityname": "Moline, IL",
+        "iatacode": "MLI"
+    },
+    {
+        "cityname": "Monroe, LA",
+        "iatacode": "MLU"
+    },
+    {
+        "cityname": "Monterey, CA",
+        "iatacode": "MRY"
+    },
+    {
+        "cityname": "Montgomery, AL",
+        "iatacode": "MGM"
+    },
+    {
+        "cityname": "Montrose, CO",
+        "iatacode": "MTJ"
+    },
+    {
+        "cityname": "Morgantown, WV",
+        "iatacode": "MGW"
+    },
+    {
+        "cityname": "Moses Lake, WA",
+        "iatacode": "MWH"
+    },
+    {
+        "cityname": "Muscle Shoals, AL",
+        "iatacode": "MSL"
+    },
+    {
+        "cityname": "Muskegon, MI",
+        "iatacode": "MKG"
+    },
+    {
+        "cityname": "Myrtle Beach, SC",
+        "iatacode": "MYR"
+    },
+    {
+        "cityname": "Nantucket, MA",
+        "iatacode": "ACK"
+    },
+    {
+        "cityname": "Naples, FL",
+        "iatacode": "APF"
+    },
+    {
+        "cityname": "Nashville, TN",
+        "iatacode": "BNA"
+    },
+    {
+        "cityname": "New Bern, NC",
+        "iatacode": "EWN"
+    },
+    {
+        "cityname": "New Haven, CT",
+        "iatacode": "HVN"
+    },
+    {
+        "cityname": "New Orleans, LA",
+        "iatacode": "MSY"
+    },
+    {
+        "cityname": "New York, NY",
+        "iatacode": "JFK"
+    },
+    {
+        "cityname": "New York, NY",
+        "iatacode": "NYC - All Airports"
+    },
+    {
+        "cityname": "New York, NY",
+        "iatacode": "LGA"
+    },
+    {
+        "cityname": "Newark, NJ",
+        "iatacode": "EWR"
+    },
+    {
+        "cityname": "Newburgh, NY",
+        "iatacode": "SWF"
+    },
+    {
+        "cityname": "Newport News, VA",
+        "iatacode": "PHF"
+    },
+    {
+        "cityname": "Nome, AK",
+        "iatacode": "OME"
+    },
+    {
+        "cityname": "Norfolk, VA",
+        "iatacode": "ORF"
+    },
+    {
+        "cityname": "North Bend, OR",
+        "iatacode": "OTH"
+    },
+    {
+        "cityname": "North Platte, NE",
+        "iatacode": "LBF"
+    },
+    {
+        "cityname": "Oakland, CA",
+        "iatacode": "OAK"
+    },
+    {
+        "cityname": "Ogdensburg, NY",
+        "iatacode": "OGS"
+    },
+    {
+        "cityname": "Oklahoma City, OK",
+        "iatacode": "OKC"
+    },
+    {
+        "cityname": "Omaha, NE",
+        "iatacode": "OMA"
+    },
+    {
+        "cityname": "Ontario, CA",
+        "iatacode": "ONT"
+    },
+    {
+        "cityname": "Orange County, CA",
+        "iatacode": "SNA"
+    },
+    {
+        "cityname": "Orlando, FL",
+        "iatacode": "MCO"
+    },
+    {
+        "cityname": "Oshkosh, WI",
+        "iatacode": "OSH"
+    },
+    {
+        "cityname": "Owensboro, KY",
+        "iatacode": "OWB"
+    },
+    {
+        "cityname": "Oxnard, CA",
+        "iatacode": "OXR"
+    },
+    {
+        "cityname": "Paducah, KY",
+        "iatacode": "PAH"
+    },
+    {
+        "cityname": "Page, AZ",
+        "iatacode": "PGA"
+    },
+    {
+        "cityname": "Palm Springs, CA",
+        "iatacode": "PSP"
+    },
+    {
+        "cityname": "Panama City, FL",
+        "iatacode": "PFN"
+    },
+    {
+        "cityname": "Parkersburg, WV",
+        "iatacode": "PKB"
+    },
+    {
+        "cityname": "Pasco, WA",
+        "iatacode": "PSC"
+    },
+    {
+        "cityname": "Pellston, MI",
+        "iatacode": "PLN"
+    },
+    {
+        "cityname": "Pendleton, OR",
+        "iatacode": "PDT"
+    },
+    {
+        "cityname": "Pensacola, FL",
+        "iatacode": "PNS"
+    },
+    {
+        "cityname": "Peoria, IL",
+        "iatacode": "PIA"
+    },
+    {
+        "cityname": "Philadelphia, PA",
+        "iatacode": "PHL"
+    },
+    {
+        "cityname": "Phoenix, AZ",
+        "iatacode": "PHX"
+    },
+    {
+        "cityname": "Pierre, SD",
+        "iatacode": "PIR"
+    },
+    {
+        "cityname": "Pinehurst, NC",
+        "iatacode": "SOP"
+    },
+    {
+        "cityname": "Pittsburgh, PA",
+        "iatacode": "PIT"
+    },
+    {
+        "cityname": "Pocatello, ID",
+        "iatacode": "PIH"
+    },
+    {
+        "cityname": "Ponca City, OK",
+        "iatacode": "PNC"
+    },
+    {
+        "cityname": "Portland, ME",
+        "iatacode": "PWM"
+    },
+    {
+        "cityname": "Portland, OR",
+        "iatacode": "PDX"
+    },
+    {
+        "cityname": "Portsmouth, NH",
+        "iatacode": "PSM"
+    },
+    {
+        "cityname": "Prescott, AZ",
+        "iatacode": "PRC"
+    },
+    {
+        "cityname": "Presque Isle, ME",
+        "iatacode": "PQI"
+    },
+    {
+        "cityname": "Providence, RI",
+        "iatacode": "PVD"
+    },
+    {
+        "cityname": "Provincetown, MA",
+        "iatacode": "PVC"
+    },
+    {
+        "cityname": "Pueblo, CO",
+        "iatacode": "PUB"
+    },
+    {
+        "cityname": "Pullman, WA",
+        "iatacode": "PUW"
+    },
+    {
+        "cityname": "Quincy, IL",
+        "iatacode": "UIN"
+    },
+    {
+        "cityname": "Raleigh, NC",
+        "iatacode": "RDU"
+    },
+    {
+        "cityname": "Rapid City, SD",
+        "iatacode": "RAP"
+    },
+    {
+        "cityname": "Redding, CA",
+        "iatacode": "RDD"
+    },
+    {
+        "cityname": "Redmond, OR",
+        "iatacode": "RDM"
+    },
+    {
+        "cityname": "Reno, NV",
+        "iatacode": "RNO"
+    },
+    {
+        "cityname": "Rhinelander, WI",
+        "iatacode": "RHI"
+    },
+    {
+        "cityname": "Richmond, VA",
+        "iatacode": "RIC"
+    },
+    {
+        "cityname": "Riverton, WY",
+        "iatacode": "RIW"
+    },
+    {
+        "cityname": "Roanoke, VA",
+        "iatacode": "ROA"
+    },
+    {
+        "cityname": "Rochester, MN",
+        "iatacode": "RST"
+    },
+    {
+        "cityname": "Rochester, NY",
+        "iatacode": "ROC"
+    },
+    {
+        "cityname": "Rock Springs, WY",
+        "iatacode": "RKS"
+    },
+    {
+        "cityname": "Rockford, IL",
+        "iatacode": "RFD"
+    },
+    {
+        "cityname": "Rockland, ME",
+        "iatacode": "RKD"
+    },
+    {
+        "cityname": "Roswell, NM",
+        "iatacode": "ROW"
+    },
+    {
+        "cityname": "Rutland, VT",
+        "iatacode": "RUT"
+    },
+    {
+        "cityname": "Sacramento, CA",
+        "iatacode": "SMF"
+    },
+    {
+        "cityname": "Saginaw, MI",
+        "iatacode": "MBS"
+    },
+    {
+        "cityname": "Salina, KS",
+        "iatacode": "SLN"
+    },
+    {
+        "cityname": "Salisbury, MD",
+        "iatacode": "SBY"
+    },
+    {
+        "cityname": "Salt Lake City, UT",
+        "iatacode": "SLC"
+    },
+    {
+        "cityname": "San Angelo, TX",
+        "iatacode": "SJT"
+    },
+    {
+        "cityname": "San Antonio, TX",
+        "iatacode": "SAT"
+    },
+    {
+        "cityname": "San Diego, CA",
+        "iatacode": "SAN"
+    },
+    {
+        "cityname": "San Francisco, CA",
+        "iatacode": "QSF - All Airports"
+    },
+    {
+        "cityname": "San Francisco, CA",
+        "iatacode": "SFO"
+    },
+    {
+        "cityname": "San Jose, CA",
+        "iatacode": "SJC"
+    },
+    {
+        "cityname": "San Luis Obispo, CA",
+        "iatacode": "SBP"
+    },
+    {
+        "cityname": "Sand Point, AK",
+        "iatacode": "SDP"
+    },
+    {
+        "cityname": "Santa Barbara, CA",
+        "iatacode": "SBA"
+    },
+    {
+        "cityname": "Santa Fe, NM",
+        "iatacode": "SAF"
+    },
+    {
+        "cityname": "Santa Maria, CA",
+        "iatacode": "SMX"
+    },
+    {
+        "cityname": "Santa Rosa, CA",
+        "iatacode": "STS"
+    },
+    {
+        "cityname": "Saranac Lake, NY",
+        "iatacode": "SLK"
+    },
+    {
+        "cityname": "Sarasota, FL",
+        "iatacode": "SRQ"
+    },
+    {
+        "cityname": "Sault Ste. Marie, MI",
+        "iatacode": "CIU"
+    },
+    {
+        "cityname": "Savannah, GA",
+        "iatacode": "SAV"
+    },
+    {
+        "cityname": "Scottsbluff, NE",
+        "iatacode": "BFF"
+    },
+    {
+        "cityname": "Seattle, WA",
+        "iatacode": "SEA"
+    },
+    {
+        "cityname": "Shenandoah Valley Airport, VA",
+        "iatacode": "SHD"
+    },
+    {
+        "cityname": "Sheridan, WY",
+        "iatacode": "SHR"
+    },
+    {
+        "cityname": "Shreveport, LA",
+        "iatacode": "SHV"
+    },
+    {
+        "cityname": "Sidney, MT",
+        "iatacode": "SDY"
+    },
+    {
+        "cityname": "Silver City, NM",
+        "iatacode": "SVC"
+    },
+    {
+        "cityname": "Sioux City, IA",
+        "iatacode": "SUX"
+    },
+    {
+        "cityname": "Sioux Falls, SD",
+        "iatacode": "FSD"
+    },
+    {
+        "cityname": "Sitka, AK",
+        "iatacode": "SIT"
+    },
+    {
+        "cityname": "Skagway, AK",
+        "iatacode": "SGY"
+    },
+    {
+        "cityname": "South Bend, IN",
+        "iatacode": "SBN"
+    },
+    {
+        "cityname": "Spokane, WA",
+        "iatacode": "GEG"
+    },
+    {
+        "cityname": "Springfield, IL",
+        "iatacode": "SPI"
+    },
+    {
+        "cityname": "Springfield, MA",
+        "iatacode": "CEF"
+    },
+    {
+        "cityname": "Springfield, MO",
+        "iatacode": "SGF"
+    },
+    {
+        "cityname": "Springfield, VT",
+        "iatacode": "VSF"
+    },
+    {
+        "cityname": "St. Cloud, MN",
+        "iatacode": "STC"
+    },
+    {
+        "cityname": "St. George, UT",
+        "iatacode": "SGU"
+    },
+    {
+        "cityname": "St. Louis, MO",
+        "iatacode": "STL"
+    },
+    {
+        "cityname": "St. Petersburg, FL",
+        "iatacode": "PIE"
+    },
+    {
+        "cityname": "State College, PA",
+        "iatacode": "SCE"
+    },
+    {
+        "cityname": "Steamboat Springs, CO",
+        "iatacode": "SBS"
+    },
+    {
+        "cityname": "Sun Valley, ID",
+        "iatacode": "SUN"
+    },
+    {
+        "cityname": "Syracuse, NY",
+        "iatacode": "SYR"
+    },
+    {
+        "cityname": "Tallahassee, FL",
+        "iatacode": "TLH"
+    },
+    {
+        "cityname": "Tampa, FL",
+        "iatacode": "TPA"
+    },
+    {
+        "cityname": "Telluride, CO",
+        "iatacode": "TEX"
+    },
+    {
+        "cityname": "Texarkana, AR",
+        "iatacode": "TXK"
+    },
+    {
+        "cityname": "Thief River Falls, MN",
+        "iatacode": "TVF"
+    },
+    {
+        "cityname": "Toksook Bay, AK",
+        "iatacode": "OOK"
+    },
+    {
+        "cityname": "Toledo, OH",
+        "iatacode": "TOL"
+    },
+    {
+        "cityname": "Topeka, KS",
+        "iatacode": "TOP"
+    },
+    {
+        "cityname": "Traverse City, MI",
+        "iatacode": "TVC"
+    },
+    {
+        "cityname": "Trenton, NJ",
+        "iatacode": "TTN"
+    },
+    {
+        "cityname": "Tri-City Airport, TN",
+        "iatacode": "TRI"
+    },
+    {
+        "cityname": "Tucson, AZ",
+        "iatacode": "TUS"
+    },
+    {
+        "cityname": "Tulsa, OK",
+        "iatacode": "TUL"
+    },
+    {
+        "cityname": "Tupelo, MS",
+        "iatacode": "TUP"
+    },
+    {
+        "cityname": "Twin Falls, ID",
+        "iatacode": "TWF"
+    },
+    {
+        "cityname": "Tyler, TX",
+        "iatacode": "TYR"
+    },
+    {
+        "cityname": "Unalakleet, AK",
+        "iatacode": "UNK"
+    },
+    {
+        "cityname": "Vail, CO",
+        "iatacode": "EGE"
+    },
+    {
+        "cityname": "Valdez, AK",
+        "iatacode": "VDZ"
+    },
+    {
+        "cityname": "Valdosta, GA",
+        "iatacode": "VLD"
+    },
+    {
+        "cityname": "Victoria, TX",
+        "iatacode": "VCT"
+    },
+    {
+        "cityname": "Visalia, CA",
+        "iatacode": "VIS"
+    },
+    {
+        "cityname": "Waco, TX",
+        "iatacode": "ACT"
+    },
+    {
+        "cityname": "Walla Walla, WA",
+        "iatacode": "ALW"
+    },
+    {
+        "cityname": "Washington DC",
+        "iatacode": "IAD"
+    },
+    {
+        "cityname": "Washington DC",
+        "iatacode": "DCA"
+    },
+    {
+        "cityname": "Washington DC",
+        "iatacode": "WAS - All Airports"
+    },
+    {
+        "cityname": "Waterloo, IA",
+        "iatacode": "ALO"
+    },
+    {
+        "cityname": "Watertown, NY",
+        "iatacode": "ART"
+    },
+    {
+        "cityname": "Watertown, SD",
+        "iatacode": "ATY"
+    },
+    {
+        "cityname": "Wausau, WI",
+        "iatacode": "CWA"
+    },
+    {
+        "cityname": "Wenatchee, WA",
+        "iatacode": "EAT"
+    },
+    {
+        "cityname": "West Palm Beach, FL",
+        "iatacode": "PBI"
+    },
+    {
+        "cityname": "West Yellowstone, MT",
+        "iatacode": "WYS"
+    },
+    {
+        "cityname": "White Plains, NY",
+        "iatacode": "HPN"
+    },
+    {
+        "cityname": "Wichita Falls, TX",
+        "iatacode": "SPS"
+    },
+    {
+        "cityname": "Wichita, KS",
+        "iatacode": "ICT"
+    },
+    {
+        "cityname": "Wilkes-Barre, PA",
+        "iatacode": "AVP"
+    },
+    {
+        "cityname": "Williamsport, PA",
+        "iatacode": "IPT"
+    },
+    {
+        "cityname": "Williston, ND",
+        "iatacode": "ISN"
+    },
+    {
+        "cityname": "Wilmington, DE",
+        "iatacode": "ILG"
+    },
+    {
+        "cityname": "Wilmington, NC",
+        "iatacode": "ILM"
+    },
+    {
+        "cityname": "Wolf Point, MT",
+        "iatacode": "OLF"
+    },
+    {
+        "cityname": "Worland, WY",
+        "iatacode": "WRL"
+    },
+    {
+        "cityname": "Wrangell, AK",
+        "iatacode": "WRG"
+    },
+    {
+        "cityname": "Yakima, WA",
+        "iatacode": "YKM"
+    },
+    {
+        "cityname": "Yakutat, AK",
+        "iatacode": "YAK"
+    },
+    {
+        "cityname": "Yuma, AZ",
+        "iatacode": "YUM"
+    }
+]

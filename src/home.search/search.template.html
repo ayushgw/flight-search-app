@@ -13,11 +13,11 @@
           md-selected-item="search.flightparams.source"
           md-search-text="search.searchSource"
           md-items="item in search.searchAirport(search.searchSource)"
-          md-item-text="item.name"
+          md-item-text="item.cityname"
           md-min-length="0"
           placeholder="Enter Departure City">
           <md-item-template>
-            <span md-highlight-text="search.searchSource" md-highlight-flags="^i">{{item.name}} ({{item.code}})</span>
+            <span md-highlight-text="search.searchSource" md-highlight-flags="^i">{{item.cityname}} [{{item.iatacode}}]</span>
           </md-item-template>
           <md-not-found>
             No airports matching "{{search.searchSource}}" were found.
@@ -36,11 +36,11 @@
         md-selected-item="search.flightparams.destination"
         md-search-text="search.searchDestination"
         md-items="item in search.searchAirport(search.searchDestination)"
-        md-item-text="item.name"
+        md-item-text="item.cityname"
         md-min-length="0"
         placeholder="Enter Departure City">
         <md-item-template>
-          <span md-highlight-text="search.searchDestination" md-highlight-flags="^i">{{item.name}} ({{item.code}})</span>
+          <span md-highlight-text="search.searchDestination" md-highlight-flags="^i">{{item.cityname}} [{{item.iatacode}}]</span>
         </md-item-template>
         <md-not-found>
           No airports matching "{{search.searchDestination}}" were found.
