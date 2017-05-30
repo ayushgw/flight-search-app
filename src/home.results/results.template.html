@@ -1,4 +1,29 @@
-<div class="results">
-  <h3>Results -- Green</h3>
-  <button ui-sref="home.search">Go To Home</button>
+<div class="results container">
+  <a ui-sref="home.search" class="btn btn-warning">Back To Search</a>
+  <div layout="row" class="md-margin mg-padding" layout-align="start center">
+    <img src="../Data/images/list.png" alt="Search for flights">
+    &nbsp; &nbsp;
+    <h2>Flights from 'BOM' to 'DEL'</h2>
+  </div>
+  <div class="panel panel-default">
+    <!-- <div class="panel-heading">
+      <h3 class="panel-title">Flights</h3>
+    </div> -->
+    <table class="table">
+      <tr>
+        <th>Departure</th>
+        <th>Via</th>
+        <th>Destination</th>
+        <th>Duration</th>
+        <th>Total Fare</th>
+      </tr>
+      <tr ng-repeat="flight in results.flightsdata">
+        <td>{{flight.origin}} <p>Leaves at &mdash; {{flight.deptime}}</p></td>
+        <td>{{flight.airline}} <p>Stops: {{flight.stops}}</p></td>
+        <td>{{flight.destination}} <p>Arrives at &mdash; {{flight.arrtime}}</p></td>
+        <td>{{flight.duration}}</td>
+        <td>{{flight.fare}}</td>
+      </tr>
+    </table>
+  </div>
 </div>

@@ -2,5 +2,6 @@ export default function ResultsController(FLIGHTSDATA) {
   "ngInject";
   var results = this;
 
-  console.log(FLIGHTSDATA);
+  results.flightsdata = FLIGHTSDATA;
+  console.log(results.flightsdata);
 }
