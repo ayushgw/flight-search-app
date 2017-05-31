@@ -5,7 +5,13 @@ export default function ResultsController(FLIGHTSDATA) {
   results.flightsdata = FLIGHTSDATA;
   console.log(results.flightsdata);
 
-  results.flightdetails = function(flight) {
-    console.log(flight);
-  }
+  // TODO: To get flight details
+  // results.flightdetails = function(flight) {
+  //   console.log(flight.onwardflights);
+  // };
+
+  results.getformattedDate = function(date) {
+    let formattedDate = date.substring(0, 10);
+    return formattedDate;
+  };
 }
