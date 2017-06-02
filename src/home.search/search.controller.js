@@ -48,10 +48,10 @@ export default function SearchController(IATACODES, $state) {
   // Search for flights
   search.getResults = function(flightparams) {
     $state.go('home.results', {
-      source: 'BOM',
-      // source: flightparams.source.iatacode,
-      destination: 'DEL',
-      // destination: flightparams.destination.iatacode,
+      // source: 'BOM',
+      source: flightparams.source.iatacode,
+      // destination: 'DEL',
+      destination: flightparams.destination.iatacode,
       dateofdeparture: getFormattedDate(search.date),
       seatingclass: flightparams.seatingclass,
       adults: flightparams.adults,

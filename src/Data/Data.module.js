@@ -13,5 +13,5 @@ export default angular.module('Data', [])
 .service('AuthService', AuthService)
 .service('FlightsService', FlightsService)
 .service('IataCodesService', IataCodesService)
-.constant('FLIGHTS_APIBASE', 'http://developer.goibibo.com/api/search/')
+.constant('FLIGHTS_APIBASE', 'https://developer.goibibo.com/api/search/')
 .name;

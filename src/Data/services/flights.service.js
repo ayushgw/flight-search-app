@@ -7,7 +7,7 @@ export default function FlightsService(FLIGHTS_APIBASE, $http) {
       app_id: '092a4a89',
       app_key: '3957ce5215831a305bd6b9858547944f',
       format: 'json',
-      source: params.source,
+      source: params.source.substring(0, 3),
       destination: params.destination,
       dateofdeparture: params.dateofdeparture,
       seatingclass: params.seatingclass,
@@ -16,7 +16,6 @@ export default function FlightsService(FLIGHTS_APIBASE, $http) {
       infants: params.infants,
       counter: params.counter
     };
-
 
     let flightsdata = $http.get(FLIGHTS_APIBASE, { params: flightparams })
     .then(function(response) {

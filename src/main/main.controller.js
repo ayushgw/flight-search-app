@@ -31,16 +31,16 @@ export default function MainController(AuthService, $state) {
 
   main.oauthUserLogin = function(provider) {
     let Provider = provider + 'Provider';
-    AuthService.oauthUserLogin(Provider)
-    .then(function(res) {
-      console.log('User Logged In Successfully! -- Using ' + provider);
-      console.log(res);
-
-      $state.go('home');
-    })
-    .catch(function(err) {
-      console.log(err);
-    });
+    AuthService.oauthUserLogin(Provider);
+    // .then(function(res) {
+    //   console.log('User Logged In Successfully! -- Using ' + provider);
+    //   console.log(res);
+    //
+    //   $state.go('home.search');
+    // })
+    // .catch(function(err) {
+    //   console.log(err);
+    // });
   };
 
   main.logoutUser = function() {

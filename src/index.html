@@ -3,17 +3,31 @@
 <head>
   <meta charset="utf-8">
   <base href="/">
+  <link rel="icon" href="Data/images/favicon.png?" type="image/png">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'"> -->
   <title>Flight Search App</title>
 </head>
 <body>
-  <div class="custom_nav">
-    <div class="app_logo">
-      <img src="Data/images/airplane-takeoff.png">
-      <span>
-        <span class="yellow">flight</span> search app
-      </span>
+  <div class="row custom_nav">
+    <div class="col-md-4">
+      <div class="app_logo" ui-sref="main">
+        <img src="Data/images/airplane-takeoff.png">
+        <span>
+          <span class="yellow">flight</span> search app
+        </span>
+      </div>
+    </div>
+    <div class="col-md-offset-5 col-md-2 text-right">
+      <br>
+      <a ui-sref="home.search" id="btn_dashboard">Go To Dashboard</a>
+    </div>
+    <div class="col-md-1 text-left">
+      <br>
+      <a ui-sref="home.search" id="btn_logout">Logout</a>
     </div>
   </div>
+
+
   <div class="content" ui-view></div>
 </body>
 </html>

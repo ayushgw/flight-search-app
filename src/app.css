@@ -17,21 +17,21 @@ body {
 }
 .custom_nav {
   position: absolute;
-  color: white;
   width: 100%;
-  font-size: 32px;
-  font-weight: 600;
-  font-style: italic;
   padding: 10px 40px;
-  text-decoration: none;
-  text-transform: lowercase;
   background-color: rgba(9, 9, 9, 0.2);
 }
-.custom_nav:hover {
+/*.custom_nav:hover {
   text-decoration: none;
   color: white;
-}
+}*/
 .app_logo {
+  font-weight: 600;
+  font-size: 32px;
+  font-style: italic;
+  text-decoration: none;
+  text-transform: lowercase;
+  color: white;
   margin: 6px;
   margin-top: 10px;
   margin-bottom: 0px;
@@ -49,6 +49,31 @@ body {
   border: 1px solid white;
   border-bottom: none;
   border-radius: 4px 4px 0px 0px;
+}
+#btn_dashboard {
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  transition: 0.3s all;
+}
+#btn_dashboard:hover {
+  font-size: 17px;
+  background-color: white;
+  color: rgba(0, 0, 0, .9);
+  text-decoration: none;
+}
+#btn_logout {
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #FC5555;
+  color: white;
+  padding: 10px;
+  transition: 0.3s all;
+}
+#btn_logout:hover {
+  font-size: 17px;
+  text-decoration: none;
 }
 .yellow {
   color: #F9F154;

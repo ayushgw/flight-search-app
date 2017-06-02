@@ -83,7 +83,6 @@ const config = {
           'postcss-loader'
         ]),
         // exclude: /node_modules/,
-        // include: [ path.resolve(__dirname, '/node_modules/angucomplete-alt/angucomplete-alt.css') ],
       },
       {
         test: /\.html$/,
@@ -91,11 +90,13 @@ const config = {
       },
       {
         test: /\.(jpe?g|png|gif)$/,
+        // use: ['file-loader?name=images/[hash:10].[ext]', 'image-webpack-loader'], //using file-loader instead of url-loader for gh-pages -- base64 data urls do not work on gh-pages
         use: ['url-loader?limit=10000&name=images/[hash:10].[ext]', 'image-webpack-loader'],
         exclude: /node_modules/
       },
       {
         test: /\.(ttf|eot|woff2?|svg)$/,
+        // use: ['url-loader?&name=assets/[hash:10].[ext]'],
         use: ['url-loader?limit=10000&name=assets/[hash:10].[ext]'],
         // exclude: /node_modules/
       },
