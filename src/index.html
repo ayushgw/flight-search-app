@@ -17,13 +17,13 @@
         </span>
       </div>
     </div>
-    <div class="col-md-offset-5 col-md-2 text-right">
+    <div class="col-md-1 pull-right">
       <br>
-      <a ui-sref="home.search" id="btn_dashboard">Go To Dashboard</a>
+      <a id="btn_logout" ui-sref="main" ng-click="logoutUser()" ng-if="isUserLoggedIn">Logout</a>
     </div>
-    <div class="col-md-1 text-left">
+    <div class="col-md-2 pull-right" ng-if="isUserLoggedIn && state == 'main'">
       <br>
-      <a ui-sref="home.search" id="btn_logout">Logout</a>
+      <a id="btn_dashboard" ui-sref="home.search">Go To Dashboard</a>
     </div>
   </div>
 

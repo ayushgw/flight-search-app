@@ -17,30 +17,26 @@ export default function MainController(AuthService, $state) {
   };
 
   main.loginUser = function(user) {
-    AuthService.loginUser(user)
-    .then(function(res) {
-      console.log('User Logged In Successfully! -- Using Email/Password');
-      console.log(res);
-
+    let userlogin = AuthService.loginUser(user)
+    userlogin.then(function(result) {
       $state.go('home.search');
+      console.log(result);
     })
-    .catch(function(err) {
-      console.log(err);
+    .catch(function(error) {
+      console.log(error);
     });
   };
 
   main.oauthUserLogin = function(provider) {
     let Provider = provider + 'Provider';
-    AuthService.oauthUserLogin(Provider);
-    // .then(function(res) {
-    //   console.log('User Logged In Successfully! -- Using ' + provider);
-    //   console.log(res);
-    //
-    //   $state.go('home.search');
-    // })
-    // .catch(function(err) {
-    //   console.log(err);
-    // });
+    let oauthlogin = AuthService.oauthUserLogin(Provider);
+    oauthlogin.then(function(result) {
+      console.log(result);
+      $state.go('home.search');
+    })
+    .catch(function(error) {
+      console.log(error);
+    })
   };
 
   main.logoutUser = function() {
