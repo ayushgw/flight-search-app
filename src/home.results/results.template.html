@@ -55,7 +55,7 @@
               <p ng-if="flight.stops == 1"> &rightarrow; {{flight.onwardflights[0].origin}} &rightarrow; {{flight.onwardflights[0].destination}}</p>
             </div>
           </div>
-          <div ng-if="flight.details" class="list_details_row">
+          <div ng-if="flight.details" class="list_details_row slide">
             <div ng-if="flight.stops == 0" layout="column" layout-align="center center" class="list_details md-padding">
               <p>It's a direct flight.</p>
               <a ng-click="flight.details = false">Close</a>
