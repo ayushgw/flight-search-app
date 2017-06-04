@@ -1,6 +1,8 @@
-export default function SearchController(IATACODES, $state) {
+export default function SearchController(IATACODES, $state, $rootScope) {
   "ngInject";
   var search = this;
+
+  $rootScope.spinner = false;
 
   //Date Picker
   var date = new Date();
@@ -47,6 +49,8 @@ export default function SearchController(IATACODES, $state) {
 
   // Search for flights
   search.getResults = function(flightparams) {
+    $rootScope.isLoading = true;
+
     $state.go('home.results', {
       // source: 'BOM',
       source: flightparams.source.iatacode,

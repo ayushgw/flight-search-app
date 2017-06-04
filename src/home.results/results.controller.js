@@ -1,9 +1,9 @@
-export default function ResultsController(FLIGHTSDATA) {
+export default function ResultsController(FLIGHTSDATA, $rootScope) {
   "ngInject";
   var results = this;
 
   results.flightsdata = FLIGHTSDATA;
-  console.log(results.flightsdata);
+  $rootScope.isLoading = false;
 
   // TODO: To get flight details
   // results.flightdetails = function(flight) {

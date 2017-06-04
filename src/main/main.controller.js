@@ -1,4 +1,4 @@
-export default function MainController(AuthService, $state) {
+export default function MainController(AuthService, $state, $rootScope) {
   "ngInject";
   var main = this;
 
@@ -6,17 +6,21 @@ export default function MainController(AuthService, $state) {
   main.error = null;
 
   main.registerUser = function(user) {
+    $rootScope.spinner = true;
     AuthService.registerUser(user)
     .then(function(res) {
       console.log('User Registered Successfully!');
       console.log(res);
+      $rootScope.spinner = false;
     })
     .catch(function(err) {
       console.log(err);
+      $rootScope.spinner = false;
     });
   };
 
   main.loginUser = function(user) {
+    $rootScope.spinner = true;
     let userlogin = AuthService.loginUser(user)
     userlogin.then(function(result) {
       $state.go('home.search');
