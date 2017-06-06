@@ -52,9 +52,9 @@ export default function SearchController(IATACODES, $state, $rootScope) {
     $rootScope.isLoading = true;
 
     $state.go('home.results', {
-      // source: 'BOM',
+      sourcecity: flightparams.source.cityname,
       source: flightparams.source.iatacode,
-      // destination: 'DEL',
+      destinationcity: flightparams.destination.cityname,
       destination: flightparams.destination.iatacode,
       dateofdeparture: getFormattedDate(search.date),
       seatingclass: flightparams.seatingclass,

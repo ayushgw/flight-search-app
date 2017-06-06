@@ -21,7 +21,8 @@
     "firebaseui": "^2.0.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
-    "mdi": "^1.9.33"
+    "mdi": "^1.9.33",
+    "moment": "^2.18.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",

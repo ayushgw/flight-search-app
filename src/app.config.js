@@ -32,7 +32,7 @@ export default function RoutesConfig($locationProvider, $urlRouterProvider, $sta
     }
   })
   .state('home.results', {
-    url: '/results?source&destination&dateofdeparture&seatingclass&adults&children&infants&counter',
+    url: '/results?source&destination&dateofdeparture&seatingclass&adults&children&infants&counter&sourcecity&destinationcity',
     template: require('./home.results/results.template.html'),
     controller: 'ResultsController',
     controllerAs: 'results',
@@ -43,6 +43,23 @@ export default function RoutesConfig($locationProvider, $urlRouterProvider, $sta
         var flightparams = $stateParams;
         var flightsdata = FlightsService.getFlights(flightparams);
         return flightsdata;
+      },
+      CITIES: function($stateParams) {
+        "ngInject";
+
+        var from = {
+          citycode: $stateParams.source,
+          cityname: $stateParams.sourcecity
+        };
+        var to = {
+          citycode: $stateParams.destination,
+          cityname: $stateParams.destinationcity
+        };
+        var cities = {
+          from: from,
+          to: to
+        }
+        return cities;
       }
     }
   })

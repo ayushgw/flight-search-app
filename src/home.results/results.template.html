@@ -3,124 +3,24 @@
   <div layout="row" layout-align="start center" class="md-margin mg-padding">
     <img src="../Data/images/list.png" alt="Search for flights">
     &nbsp; &nbsp;
-    <h2>Flights from 'BOM' to 'DEL'</h2>
+    <h2>Flights from <span class="cityname">{{results.cities.from.cityname}}</span> to <span class="cityname">{{results.cities.to.cityname}}</span></h2>
   </div>
-  <div class="results_list_container md-whiteframe-6dp">
+  <div class="no_data" ng-if="!results.flightsdata.length">
+    Sorry no flights available from {{results.cities.from.cityname}} to {{results.cities.to.cityname}}
+  </div>
+  <div class="results_list_container md-whiteframe-6dp" ng-show="results.flightsdata.length">
     <ul>
       <li layout="row" class="list_head text-center">
         <div flex="20" class="text-center">Airlines</div>
         <div flex="20">Departure</div>
         <div flex="20">Destination</div>
         <div flex="20">Duration</div>
-        <div flex="20">Price</span>
-        </li>
-        <li class="list_body_row" dir-paginate="flight in results.flightsdata | itemsPerPage: 8" ng-init="flight.details = false">
-          <div ng-if="flight.stops == 0" layout="row" class="list_main_row text-center" ng-click="results.flightdetails(flight); flight.details = !flight.details">
-            <div flex="20">{{flight.airline}}</div>
-            <div flex="20">
-              <p>{{flight.origin}}</p>
-              <p class="text_bold">{{flight.deptime}}</p>
-            </div>
-            <div flex="20">
-              <p>{{flight.destination}}</p>
-              <p class="text_bold">{{flight.arrtime}}</p>
-            </div>
-            <div flex="20">
-              {{flight.duration}}
-              <p class="text_bold">(Non-Stop)</p>
-            </div>
-            <div flex="20" class="text_bold"><img src="../Data/images/currency-inr.png" alt="Rupees">{{flight.fare}}</div>
-          </div>
-          <div ng-if="flight.stops == 1" layout="row" class="list_main_row text-center" ng-click="results.flightdetails(flight); flight.details = !flight.details">
-            <div flex="20">{{flight.airline}}</div>
-            <div flex="20">
-              <p>{{flight.origin}}</p>
-              <p class="text_bold">{{flight.deptime}}</p>
-            </div>
-            <div flex="20">
-              <p>{{flight.onwardflights[0].destination}}</p>
-              <p class="text_bold">{{flight.onwardflights[0].arrtime}}</p>
-            </div>
-            <div flex="20">
-              {{flight.duration}}
-              <p class="text_bold">{{flight.stops}} stop(s)</p>
-            </div>
-            <div flex="20" class="text_bold"><img src="../Data/images/currency-inr.png" alt="Rupees">{{flight.fare}}</div>
-          </div>
-          <div layout="row" ng-if="flight.stops <= 1">
-            <div flex="30"></div>
-            <div flex="33" layout="row" class="flight_path">
-              <p>{{flight.origin}}</p>
-              <p ng-if="flight.stops == 0"> &rightarrow; {{flight.destination}}</p>
-              <p ng-if="flight.stops == 1"> &rightarrow; {{flight.onwardflights[0].origin}} &rightarrow; {{flight.onwardflights[0].destination}}</p>
-            </div>
-          </div>
-          <div ng-if="flight.details" class="list_details_row slide">
-            <div ng-if="flight.stops == 0" layout="column" layout-align="center center" class="list_details md-padding">
-              <p>It's a direct flight.</p>
-              <a ng-click="flight.details = false">Close</a>
-            </div>
-            <div ng-if="flight.stops == 1" layout="column" layout-align="center center" class="list_details md-padding">
-              <div class="row container">
-                <div layout="row" class="col-md-4">
-                  <div class="column text-center">
-                    <img src="../Data/images/airplane.png" alt="Flight" height="50" width="50">
-                    <p>Flight 1</p>
-                  </div>
-                  <div class="text-left padding_left">
-                    <p>{{flight.airline}}</p>
-                    <p>{{flight.flightcode}}</p>
-                    <p ng-if="flight.seatingclass == 'E'">Economy</p>
-                    <p ng-if="flight.seatingclass == 'B'">Business</p>
-                  </div>
-                </div>
-                <div class="col-md-3 text-right">
-                  <div>{{flight.origin}} &nbsp; <span class="text_bold">{{flight.deptime}}</span></div>
-                  <p>{{results.getformattedDate(flight.depdate)}}</p>
-                </div>
-                <div class="col-md-2 text-center">
-                  <img src="../Data/images/clock.png" alt="Time">
-                  <p>{{flight.splitduration}}</p>
-                </div>
-                <div class="col-md-3 text-left">
-                  <div>{{flight.destination}} &nbsp; <span class="text_bold">{{flight.arrtime}}</span></div>
-                  <p>{{results.getformattedDate(flight.arrdate)}}</p>
-                </div>
-              </div>
-              <br><br>
-              <div class="row container">
-                <div layout="row" class="col-md-4">
-                  <div class="column text-center">
-                    <img src="../Data/images/airplane.png" alt="Flight" height="50" width="50">
-                    <p>Flight 2</p>
-                  </div>
-                  <div class="text-left padding_left">
-                    <p>{{flight.onwardflights[0].airline}}</p>
-                    <p>{{flight.onwardflights[0].flightcode}}</p>
-                    <p ng-if="flight.onwardflights[0].seatingclass == 'E'">Economy</p>
-                    <p ng-if="flight.onwardflights[0].seatingclass == 'B'">Business</p>
-                  </div>
-                </div>
-                <div class="col-md-3 text-right">
-                  <div>{{flight.onwardflights[0].origin}} &nbsp; <span class="text_bold">{{flight.onwardflights[0].deptime}}</span></div>
-                  <p>{{results.getformattedDate(flight.onwardflights[0].depdate)}}</p>
-                </div>
-                <div class="col-md-2 text-center">
-                  <img src="../Data/images/clock.png" alt="Time">
-                  <p>{{flight.onwardflights[0].splitduration}}</p>
-                </div>
-                <div class="col-md-3 text-left">
-                  <div>{{flight.onwardflights[0].destination}} &nbsp; <span class="text_bold">{{flight.onwardflights[0].arrtime}}</span></div>
-                  <p>{{results.getformattedDate(flight.onwardflights[0].arrdate)}}</p>
-                </div>
-              </div>
-              <a ng-click="flight.details = false">Close</a>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div layout="row" layout-align="center">
-      <dir-pagination-controls></dir-pagination-controls>
-    </div>
+        <div flex="20">Price</div>
+      </li>
+      <flight-list-item dir-paginate="flight in results.flightsdata | itemsPerPage: 8" flight="flight" citycodes="results.citycodes"></flight-list-item>
+    </ul>
   </div>
+  <div layout="row" layout-align="center">
+    <dir-pagination-controls></dir-pagination-controls>
+  </div>
+</div>

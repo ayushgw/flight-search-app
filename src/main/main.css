@@ -105,14 +105,13 @@
 
 /* Loading Spinner */
 .loader {
-  display: inline-block;
   color: #ffffff;
-  font-size: 5px;
-  margin: 13% auto;
+  font-size: 3px;
+  margin: 5% auto;
+  margin-bottom: 5px;
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  position: absolute;
   -webkit-animation: load4 1.3s infinite linear;
   animation: load4 1.3s infinite linear;
   -webkit-transform: translateZ(0);

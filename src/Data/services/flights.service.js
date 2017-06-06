@@ -20,37 +20,38 @@ export default function FlightsService(FLIGHTS_APIBASE, $http) {
     let flightsdata = $http.get(FLIGHTS_APIBASE, { params: flightparams })
     .then(function(response) {
       let data = response.data.data.onwardflights;
-      let refinedData = [];
-      angular.forEach(data, function(key, value) {
-        let obj = {
-          origin: key.origin,
-          flightcode: key.flightcode,
-          depterminal: key.depterminal,
-          seatingclass: key.seatingclass,
-          deptime: key.deptime,
-          duration: key.duration,
-          arrterminal: key.arrterminal,
-          destination: key.destination,
-          stops: key.stops,
-          seatsavailable: key.seatsavailable,
-          fare: key.fare.totalfare,
-          onwardflights: key.onwardflights,
-          splitduration: key.splitduration,
-          airline: key.airline,
-          depdate: key.depdate,
-          arrtime: key.arrtime,
-          arrdate: key.arrdate
-        };
-
-        refinedData.push(obj);
-      })
-      return refinedData;
+      return data;
     })
     .catch(function(error) {
       return error;
     });
 
     return flightsdata;
+  };
+
+  service.getFlightDetails = function(flight) {
+    let flightdetails = [];
+    let data = flight;
+    let iterations = flight.stops;
+    while(iterations >= 0) {
+      let obj = {};
+      obj.airline = data.airline;
+      obj.flightcode = data.flightcode;
+      obj.seatingclass = data.seatingclass;
+      obj.origin = data.origin;
+      obj.deptime = data.deptime;
+      obj.depdate = data.depdate;
+      obj.splitduration = data.splitduration;
+      obj.destination = data.destination;
+      obj.arrtime = data.arrtime;
+      obj.arrdate = data.arrdate;
+
+      flightdetails.push(obj);
+      data = data.onwardflights[0];
+      iterations--;
+    }
+
+    return flightdetails;
   };
 
 }

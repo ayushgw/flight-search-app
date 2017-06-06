@@ -72,3 +72,12 @@ ul {
 .btn_search:hover {
   padding: 7px !important;
 }
+.no_data {
+  color: #FC5555;
+  font-size: 15px;
+}
+.cityname {
+  background-color: rgba(71, 64, 64, 0.1);
+  padding: 5px 8px;
+  color: white;
+}

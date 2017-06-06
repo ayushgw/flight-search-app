@@ -1,7 +1,7 @@
 export default function EnableUIRouterErrors($trace, $transitions, $rootScope, $state, $location, AuthService) {
   "ngInject";
 
-  $trace.enable('TRANSITION');
+  // $trace.enable('TRANSITION');
 
   var Auth = AuthService.getAuth();
   $rootScope.logoutUser = function() {

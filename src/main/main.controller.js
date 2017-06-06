@@ -9,13 +9,13 @@ export default function MainController(AuthService, $state, $rootScope) {
     $rootScope.spinner = true;
     AuthService.registerUser(user)
     .then(function(res) {
+      $rootScope.spinner = false;
       console.log('User Registered Successfully!');
       console.log(res);
-      $rootScope.spinner = false;
     })
     .catch(function(err) {
-      console.log(err);
       $rootScope.spinner = false;
+      console.log(err);
     });
   };
 
