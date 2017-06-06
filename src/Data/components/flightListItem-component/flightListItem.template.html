@@ -1,5 +1,5 @@
-<li class="list_body_row" ng-init="$ctrl.flight.details = false">
-  <div layout="row" class="list_main_row text-center" ng-click="$ctrl.flightdetails($ctrl.flight); $ctrl.flight.details = !$ctrl.flight.details">
+<li class="list_body_row" ng-init="flightdetails = false">
+  <div layout="row" class="list_main_row text-center" ng-click="flightdetails = !flightdetails">
     <div flex="20">{{$ctrl.flight.airline}}</div>
     <div flex="20">
       <p>{{$ctrl.citycodes.from}}</p>
@@ -18,6 +18,7 @@
     <div flex="20" class="text_bold"><img ng-src="{{$ctrl.LogoInr}}" alt="Rupees">{{$ctrl.flight.fare.grossamount}}</div>
   </div>
 
+  <flight-details ng-if="flightdetails" flight="$ctrl.flight"></flight-details>
   <!-- <div ng-if="$ctrl.flight.details" class="list_details_row slide">
     <div ng-if="$ctrl.flight.stops == 0" layout="column" layout-align="center center" class="list_details md-padding">
       <p>It's a direct $ctrl.flight.</p>

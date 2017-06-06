@@ -23,7 +23,6 @@ function FlightListItemComponentController() {
   $ctrl.getformattedDate = function(date) {
     let formattedDate = date.substring(0, 10);
     formattedDate = moment(formattedDate).format('ll');
-    // console.log(formattedDate);
     return formattedDate;
   };
 
@@ -49,10 +48,6 @@ function FlightListItemComponentController() {
     let min = split[1];
     let flightDuration = hr + 'h' + min;
     return flightDuration;
-  };
-
-  $ctrl.flightdetails = function(flight) {
-    console.log(flight);
   };
 
 }
