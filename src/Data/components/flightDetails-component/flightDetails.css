@@ -1,0 +1,30 @@
+.flight_details {
+  background-color: #3D3535;
+  padding: 20px;
+  padding-bottom: 5px;
+  color: white;
+}
+.flight_details .flight_object {
+  margin: 0 30px;
+}
+.flight_details .trajectory {
+  margin: 0 10px;
+}
+.flight_details .date {
+  font-size: 14px;
+}
+.flight_details .time {
+  font-weight: bold;
+}
+.flight_details .custom_blue {
+  color: #4B7796;
+}
+.close_button {
+  color: #FC5555;
+  font-size: 16px;
+  cursor: pointer;
+}
+.close_button:hover {
+  text-decoration: none;
+  color: #FC5555;
+}

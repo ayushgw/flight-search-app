@@ -1,0 +1,9 @@
+.flight_list_item {
+  border-top: 1px solid #D6CBCB;
+  outline: none;
+  font-size: 16px;
+}
+.flight_list_main {
+  padding: 10px;
+  outline: none;
+}

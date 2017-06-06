@@ -1,6 +1,4 @@
 import LogoInr from '../../images/currency-inr.png';
-import LogoAirplane from '../../images/airplane.png';
-import LogoClock from '../../images/clock.png';
 import moment from 'moment';
 
 var ddo = {
@@ -17,8 +15,6 @@ function FlightListItemComponentController() {
   moment().format();
 
   $ctrl.LogoInr = LogoInr;
-  $ctrl.LogoAirplane = LogoAirplane;
-  $ctrl.LogoClock = LogoClock;
 
   $ctrl.getformattedDate = function(date) {
     let formattedDate = date.substring(0, 10);
@@ -48,6 +44,10 @@ function FlightListItemComponentController() {
     let min = split[1];
     let flightDuration = hr + 'h' + min;
     return flightDuration;
+  };
+
+  $ctrl.close = function(value) {
+    $ctrl.flightdetails = !value;
   };
 
 }

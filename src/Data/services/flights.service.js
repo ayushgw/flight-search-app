@@ -33,6 +33,7 @@ export default function FlightsService(FLIGHTS_APIBASE, $http) {
     let flightdetails = [];
     let data = flight;
     let iterations = flight.stops;
+    let index = 0;
     while(iterations >= 0) {
       let obj = {};
       obj.airline = data.airline;
@@ -47,10 +48,12 @@ export default function FlightsService(FLIGHTS_APIBASE, $http) {
       obj.arrdate = data.arrdate;
 
       flightdetails.push(obj);
-      data = data.onwardflights[0];
+      data = flight.onwardflights[index];
+      index++;
       iterations--;
     }
 
+    console.log(flightdetails);
     return flightdetails;
   };
 

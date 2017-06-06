@@ -1,1 +1,28 @@
-<h2>this is flight details component</h2>
+<div layout="column" layout-align="center" class="flight_details">
+  <div layout="row" layout-align="center center">
+    <div ng-repeat="flight in $ctrl.flightdetails" layout="row" layout-align="center center" class="flight_object">
+      <div class="departure text-center">
+        <div>{{flight.origin}}</div>
+        <div class="time custom_blue">{{flight.deptime}}</div>
+        <div class="date">{{$ctrl.getformattedDate(flight.depdate)}}</div>
+      </div>
+      <div class="trajectory text-center">
+        <div>{{flight.airline}}</div>
+        <div class="custom_blue">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#8674;</div>
+        <div layout="row" layout-align="center center">
+          <img ng-src="{{$ctrl.LogoClock}}" alt="">
+          &nbsp; {{flight.splitduration}}
+        </div>
+      </div>
+      <div class="arrival text-center">
+        <div>{{flight.destination}}</div>
+        <div class="time custom_blue">{{flight.arrtime}}</div>
+        <div class="date">{{$ctrl.getformattedDate(flight.arrdate)}}</div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="text-center">
+    <a ng-click="$ctrl.close()" class="close_button"><img ng-src="{{$ctrl.LogoClose}}" alt=""> close</a>
+  </div>
+</div>

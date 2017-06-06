@@ -1,5 +1,5 @@
-<li class="list_body_row" ng-init="flightdetails = false">
-  <div layout="row" class="list_main_row text-center" ng-click="flightdetails = !flightdetails">
+<li class="flight_list_item" ng-init="$ctrl.flightdetails = false">
+  <div layout="row" class="flight_list_main text-center" ng-click="$ctrl.flightdetails = !$ctrl.flightdetails">
     <div flex="20">{{$ctrl.flight.airline}}</div>
     <div flex="20">
       <p>{{$ctrl.citycodes.from}}</p>
@@ -18,67 +18,5 @@
     <div flex="20" class="text_bold"><img ng-src="{{$ctrl.LogoInr}}" alt="Rupees">{{$ctrl.flight.fare.grossamount}}</div>
   </div>
 
-  <flight-details ng-if="flightdetails" flight="$ctrl.flight"></flight-details>
-  <!-- <div ng-if="$ctrl.flight.details" class="list_details_row slide">
-    <div ng-if="$ctrl.flight.stops == 0" layout="column" layout-align="center center" class="list_details md-padding">
-      <p>It's a direct $ctrl.flight.</p>
-      <a ng-click="$ctrl.flight.details = false">Close</a>
-    </div>
-    <div ng-if="$ctrl.flight.stops == 1" layout="column" layout-align="center center" class="list_details md-padding">
-      <div class="row container">
-        <div layout="row" class="col-md-4">
-          <div class="column text-center">
-            <img src="{{$ctrl.LogoAirplane}}" alt="Flight" height="50" width="50">
-            <p>Flight 1</p>
-          </div>
-          <div class="text-left padding_left">
-            <p>{{$ctrl.flight.airline}}</p>
-            <p>{{$ctrl.flight.$ctrl.flightcode}}</p>
-            <p ng-if="$ctrl.flight.seatingclass == 'E'">Economy</p>
-            <p ng-if="$ctrl.flight.seatingclass == 'B'">Business</p>
-          </div>
-        </div>
-        <div class="col-md-3 text-right">
-          <div>{{$ctrl.flight.origin}} &nbsp; <span class="text_bold">{{$ctrl.flight.deptime}}</span></div>
-          <p>{{$ctrl.getformattedDate($ctrl.flight.depdate)}}</p>
-        </div>
-        <div class="col-md-2 text-center">
-          <img src="{{$ctrl.LogoClock}}" alt="Time">
-          <p>{{$ctrl.flight.splitduration}}</p>
-        </div>
-        <div class="col-md-3 text-left">
-          <div>{{$ctrl.flight.destination}} &nbsp; <span class="text_bold">{{$ctrl.flight.arrtime}}</span></div>
-          <p>{{$ctrl.getformattedDate($ctrl.flight.arrdate)}}</p>
-        </div>
-      </div>
-      <br><br>
-      <div class="row container">
-        <div layout="row" class="col-md-4">
-          <div class="column text-center">
-            <img src="{{$ctrl.LogoAirplane}}" alt="Flight" height="50" width="50">
-            <p>Flight 2</p>
-          </div>
-          <div class="text-left padding_left">
-            <p>{{$ctrl.flight.onward$ctrl.flights[0].airline}}</p>
-            <p>{{$ctrl.flight.onward$ctrl.flights[0].$ctrl.flightcode}}</p>
-            <p ng-if="$ctrl.flight.onward$ctrl.flights[0].seatingclass == 'E'">Economy</p>
-            <p ng-if="$ctrl.flight.onward$ctrl.flights[0].seatingclass == 'B'">Business</p>
-          </div>
-        </div>
-        <div class="col-md-3 text-right">
-          <div>{{$ctrl.flight.onward$ctrl.flights[0].origin}} &nbsp; <span class="text_bold">{{$ctrl.flight.onward$ctrl.flights[0].deptime}}</span></div>
-          <p>{{$ctrl.getformattedDate($ctrl.flight.onward$ctrl.flights[0].depdate)}}</p>
-        </div>
-        <div class="col-md-2 text-center">
-          <img src="{{$ctrl.LogoClock}}" alt="Time">
-          <p>{{$ctrl.flight.onward$ctrl.flights[0].splitduration}}</p>
-        </div>
-        <div class="col-md-3 text-left">
-          <div>{{$ctrl.flight.onward$ctrl.flights[0].destination}} &nbsp; <span class="text_bold">{{$ctrl.flight.onward$ctrl.flights[0].arrtime}}</span></div>
-          <p>{{$ctrl.getformattedDate($ctrl.flight.onward$ctrl.flights[0].arrdate)}}</p>
-        </div>
-      </div>
-      <a ng-click="$ctrl.flight.details = false">Close</a>
-    </div>
-  </div> -->
+  <flight-details ng-show="$ctrl.flightdetails" flight="$ctrl.flight" on-close="$ctrl.close(close)" class="flight_list_details"></flight-details>
 </li>
