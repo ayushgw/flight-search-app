@@ -31,6 +31,16 @@ export default function AuthService(AuthInit, $q, $rootScope) {
     return Auth.createUserWithEmailAndPassword(user.email, user.password);
   };
 
+  service.sendVerificationEmail = function(user) {
+    user.sendEmailVerification()
+    .then(function() {
+      console.log('Email Verification Sent!');
+    })
+    .catch(function() {
+      console.log('Email Verification could not be sent!');
+    });
+  }
+
   service.loginUser = function(user) {
     return Auth.signInWithEmailAndPassword(user.email, user.password);
   };

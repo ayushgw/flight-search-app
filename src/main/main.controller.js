@@ -27,12 +27,14 @@ export default function MainController(AuthService, $state, $rootScope) {
     main.spinner.register = true;
     AuthService.registerUser(user)
     .then(function(res) {
+      AuthService.sendVerificationEmail(res);
       main.toggleSpinner('register');
       main.isUserRegistered = true;
       main.user.register = {};
       $rootScope.$digest();
     })
     .catch(function(err) {
+      console.log(err);
       main.toggleSpinner('register');
       var errormsg = "User could not be registered!";
       main.displayError('register', errormsg);
