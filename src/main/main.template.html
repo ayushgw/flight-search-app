@@ -2,6 +2,9 @@
   <div class="container">
     <div class="form_container" ng-init="main.inview = 'loginform'">
       <div class="col-md-7">
+
+        <!-- Login Container -->
+        <!--  -->
         <div class="login_container" ng-if="main.inview == 'loginform'">
           <h2>Login</h2>
           <hr>
@@ -12,20 +15,60 @@
             <div class="form-group">
               <input type="password" ng-model="main.user.login.password" class="form-control" placeholder="Password">
             </div>
-            <div class="form-group text-center">
-              <button type="submit" class="btn btn-default btn_submit" name="button">Login</button>
+            <div class="form-group error" ng-show="main.error.login">
+              <span class="text-left">{{main.error.login}}</span>
+              &nbsp;&nbsp;
+              <span ng-click="main.error.login = null" class="text-right">
+                <i class="mdi mdi-close-circle"></i>
+              </span>
             </div>
-            <a href="#">Forgot Password?</a>
+            <div class="form-group text-center">
+              <button type="submit" class="btn btn-default btn_submit" name="button" ng-disabled="main.spinner.login == true">Login</button>
+            </div>
+            <a ng-click="main.inview = 'forgotpasswordform'">Forgot Password?</a>
           </form>
-          <div class="loader" ng-if="spinner"></div>
+          <div ng-if="main.spinner.login"><img src="../Data/images/spinner.svg"></div>
           <br>
           <span>Don't have a account? <a ng-click="main.inview = 'registerform'">Sign Up Now!</a></span>
         </div>
 
-        <div class="register_container" ng-if="main.inview == 'registerform'">
+        <!-- Forgot Password -->
+        <!--  -->
+        <div class="forgotpassword_container" ng-if="main.inview == 'forgotpasswordform'">
+          <h2>Forgot Password?</h2>
+          <hr>
+          <form ng-show="!main.recoveryEmailSent" name="forgotpassword" class="main_form" role="form" ng-submit="main.sendRecoveryEmail(main.forgotpassword.email)">
+            <div class="form-group">
+              <input type="email" ng-model="main.forgotpassword.email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group error" ng-show="main.error.forgotpassword">
+              <span class="text-left">{{main.error.forgotpassword}}</span>
+              &nbsp;&nbsp;
+              <span ng-click="main.error.forgotpassword = null" class="text-right">
+                <i class="mdi mdi-close-circle"></i>
+              </span>
+            </div>
+            <div class="form-group text-center">
+              <button type="submit" class="btn btn-default btn_submit" name="button" ng-disabled="main.spinner.forgotpassword">Send Recovery Email</button>
+            </div>
+          </form>
+          <div ng-show="main.recoveryEmailSent">
+            <p>We've sent you a recovery email on your registered email. Please click on the sent link to set up a new password.</p>
+            <button type="submit" class="btn btn-default btn_submit" name="button" ng-click="main.inview = 'loginform'">
+              Done
+            </button>
+          </div>
+          <div ng-if="main.spinner.forgotpassword"><img src="../Data/images/spinner.svg"></div>
+          <br>
+          <span ng-hide="main.recoveryEmailSent" class="cancel" ng-click="main.inview = 'loginform'"><i class="mdi mdi-close-circle"></i>&nbsp;Cancel</span>
+        </div>
+
+        <!-- Register Container -->
+        <!--  -->
+        <div class="register_container" ng-if="main.inview == 'registerform'" ng-init="main.isUserRegistered = false">
           <h2>Sign Up</h2>
           <hr>
-          <form name="register" class="main_form" role="form" ng-submit="main.registerUser(main.user.register)">
+          <form ng-show="main.isUserRegistered == false" name="register" class="main_form" role="form" ng-submit="main.registerUser(main.user.register)">
             <div class="form-group">
               <input type="text" ng-model="main.user.register.fullname" class="form-control" placeholder="Full Name" required="">
             </div>
@@ -35,13 +78,26 @@
             <div class="form-group">
               <input type="password" ng-model="main.user.register.password" class="form-control" placeholder="Password" required="">
             </div>
+            <div class="form-group error" ng-show="main.error.register">
+              <span class="text-left">{{main.error.register}}</span>
+              &nbsp;&nbsp;
+              <span ng-click="main.error.register = null" class="text-right">
+                <i class="mdi mdi-close-circle"></i>
+              </span>
+            </div>
             <div class="form-group">
-              <button type="submit" class="btn btn-default btn_submit">Sign Up</button>
+              <button type="submit" class="btn btn-default btn_submit" ng-disabled="main.spinner.register">Sign Up</button>
             </div>
           </form>
-          <div class="loader" ng-if="spinner"></div>
+          <div ng-show="main.isUserRegistered == true">
+            <div class="success">
+              User has been registered successfully. Login now with the appropriate credentials.
+            </div>
+            <button type="button" name="button" class="btn btn-default btn_submit" ng-click="main.inview = 'loginform'; main.isUserRegistered = false;">Proceed</button>
+          </div>
+          <div ng-if="main.spinner.register"><img src="../Data/images/spinner.svg"></div>
           <br>
-          <span>Already a user? <a ng-click="main.inview = 'loginform'">Login Here!</a></span>
+          <span ng-hide="main.isUserRegistered == true">Already a user? <a ng-click="main.inview = 'loginform'">Login Here!</a></span>
         </div>
       </div>
 

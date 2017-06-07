@@ -1,5 +1,6 @@
 import 'jquery';
 import 'bootstrap-loader';
+import 'mdi/css/materialdesignicons.min.css';
 
 import angular from 'angular';
 import nganimate from 'angular-animate';

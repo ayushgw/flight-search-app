@@ -1,4 +1,4 @@
-export default function AuthService(AuthInit, $q) {
+export default function AuthService(AuthInit, $q, $rootScope) {
   "ngInject";
   var service = this;
 
@@ -32,19 +32,7 @@ export default function AuthService(AuthInit, $q) {
   };
 
   service.loginUser = function(user) {
-    let userlogin = Auth.signInWithEmailAndPassword(user.email, user.password);
-    userlogin.then(function(result) {
-      let token = result.credential.accessToken;
-      console.log('User LoggedIn with Username/Password. Token: ' + token);
-
-      let user = result.user;
-      return user;
-    })
-    .catch(function(error) {
-      return error;
-    });
-
-    return userlogin;
+    return Auth.signInWithEmailAndPassword(user.email, user.password);
   };
 
   service.oauthUserLogin = function(provider) {
@@ -62,6 +50,10 @@ export default function AuthService(AuthInit, $q) {
     });
 
     return oauthlogin;
+  };
+
+  service.sendRecoveryEmail = function(email) {
+    return Auth.sendPasswordResetEmail(email);
   };
 
   service.logoutUser = function() {
