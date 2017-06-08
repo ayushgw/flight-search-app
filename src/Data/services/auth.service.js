@@ -32,14 +32,25 @@ export default function AuthService(AuthInit, $q, $rootScope) {
   };
 
   service.sendVerificationEmail = function(user) {
-    user.sendEmailVerification()
+    let User = (user || Auth.currentUser());
+    User.sendEmailVerification()
     .then(function() {
       console.log('Email Verification Sent!');
     })
     .catch(function() {
       console.log('Email Verification could not be sent!');
     });
-  }
+  };
+
+  service.updateUserProfile = function(user, updateObj) {
+    user.updateProfile(updateObj)
+    .then(function() {
+      // Profile Updated
+    })
+    .catch(function() {
+      // Error while updating profile
+    })
+  };
 
   service.loginUser = function(user) {
     return Auth.signInWithEmailAndPassword(user.email, user.password);

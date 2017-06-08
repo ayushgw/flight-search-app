@@ -28,6 +28,7 @@ export default function MainController(AuthService, $state, $rootScope) {
     AuthService.registerUser(user)
     .then(function(res) {
       AuthService.sendVerificationEmail(res);
+      AuthService.updateUserProfile(res, { displayName: user.fullname });
       main.toggleSpinner('register');
       main.isUserRegistered = true;
       main.user.register = {};
