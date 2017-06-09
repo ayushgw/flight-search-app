@@ -53,7 +53,6 @@ export default function FlightsService(FLIGHTS_APIBASE, $http) {
       iterations--;
     }
 
-    console.log(flightdetails);
     return flightdetails;
   };
 

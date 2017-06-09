@@ -1,101 +1,98 @@
 <div class="search container">
-  <div layout="row" class="md-margin mg-padding" layout-align="start center">
-    <img src="../Data/images/magnify.png" alt="Search for flights">
-    &nbsp; &nbsp;
-    <h2>Search for flights</h2>
+  <div layout="row" layout-align="start center" id="note" class="md-margin md-padding">
+    Note: This app is only made to demonstrate the implementation of AngularJS using modular approach. It has its limitations since it is using a free API to fetch and display flights. So, it might be possible that searches from some cities may not return back any data.
   </div>
 
-  <md-content class="md-padding">
+  <md-content layout-padding>
     <form ng-submit="search.getResults(search.flightparams)">
+
       <div layout-gt-sm="row" layout="column">
-        <div flex-gt-sm="40" flex-sm="100">
-          <md-autocomplete
-          md-selected-item="search.flightparams.source"
-          md-search-text="search.searchSource"
-          md-items="item in search.searchAirport(search.searchSource)"
-          md-item-text="item.cityname"
-          md-min-length="0"
-          placeholder="Enter Departure City">
-          <md-item-template>
-            <span md-highlight-text="search.searchSource" md-highlight-flags="^i">{{item.cityname}} [{{item.iatacode}}]</span>
-          </md-item-template>
-          <md-not-found>
-            No airports matching "{{search.searchSource}}" were found.
-          </md-not-found>
-        </md-autocomplete>
-      </div>
-
-      <div flex-gt-sm="20" class="text-center" hide-sm>
-        <button ng-click="search.interchangeSearchCities()" class="btn_swap">
-          <img src="../Data/images/swap-horizontal.png" alt="swap cities">
-        </button>
-      </div>
-
-      <div flex-gt-sm="40" flex-sm="100">
-        <md-autocomplete
-        md-selected-item="search.flightparams.destination"
-        md-search-text="search.searchDestination"
-        md-items="item in search.searchAirport(search.searchDestination)"
-        md-item-text="item.cityname"
+        <md-autocomplete required flex-gt-sm="40" flex-sm="100"
+        md-selected-item="search.flightparams.source"
+        md-search-text="search.searchSource"
+        md-items="item in search.searchAirport(search.searchSource)"
+        md-item-text="item.airport"
         md-min-length="0"
+        md-menu-class="autocomplete-custom-template"
         placeholder="Enter Departure City">
-        <md-item-template>
-          <span md-highlight-text="search.searchDestination" md-highlight-flags="^i">{{item.cityname}} [{{item.iatacode}}]</span>
-        </md-item-template>
-        <md-not-found>
-          No airports matching "{{search.searchDestination}}" were found.
-        </md-not-found>
-      </md-autocomplete>
+      <md-item-template>
+        <span class="item-title">
+          <span md-highlight-text="search.searchSource" md-highlight-flags="^i">{{item.airport}}</span>
+        </span>
+        <span class="item-metadata">
+          <i class="mdi mdi-home-map-marker"></i>
+          <span md-highlight-text="search.searchSource" md-highlight-flags="^i">{{item.country}}</span>
+        </span>
+      </md-item-template>
+      <md-not-found>
+        No airports matching "{{search.searchSource}}" were found.
+      </md-not-found>
+    </md-autocomplete>
+
+    <div flex-gt-sm="20" class="text-center" hide-sm hide-xs>
+      <button ng-click="search.interchangeSearchCities()" class="btn_swap">
+        <img src="../Data/images/swap-horizontal.png" alt="swap cities">
+      </button>
     </div>
-  </div>
 
-  <br><br>
+    <md-autocomplete required flex-gt-sm="40" flex-sm="100"
+    md-selected-item="search.flightparams.destination"
+    md-search-text="search.searchDestination"
+    md-items="item in search.searchAirport(search.searchDestination)"
+    md-item-text="item.airport"
+    md-min-length="0"
+    md-menu-class="autocomplete-custom-template"
+    placeholder="Enter Arrival City">
+    <md-item-template>
+      <span class="item-title">
+        <span md-highlight-text="search.searchDestination" md-highlight-flags="^i">{{item.airport}}</span>
+      </span>
+      <span class="item-metadata">
+        <i class="mdi mdi-home-map-marker"></i>
+        <span md-highlight-text="search.searchDestination" md-highlight-flags="^i">{{item.country}}</span>
+      </span>
+    </md-item-template>
+    <md-not-found>
+      No airports matching "{{search.searchDestination}}" were found.
+    </md-not-found>
+  </md-autocomplete>
+</div>
 
-  <div layout="row" layout-align="center">
-    <md-datepicker ng-model="search.date" md-placeholder="Select Date of Departure" md-min-date="search.minDate" md-max-date="search.maxDate"></md-datepicker>
-  </div>
+<br><br>
 
-  <br>
+<div layout="row" layout-align="center">
+  <md-datepicker ng-model="search.date" md-placeholder="Select Date of Departure" md-min-date="search.minDate" md-max-date="search.maxDate"></md-datepicker>
+</div>
 
-  <div layout-gt-sm="row" layout="column" layout-align="space-between" ng-init="numberOfPeople = [0,1,2,3,4,5,6,7,8,9]">
-    <md-input-container class="md-block" flex-gt-sm="20">
-      <label>Class</label>
-      <md-select ng-model="search.flightparams.seatingclass">
-        <md-option value="E">Economy</md-option>
-        <md-option value="B">Business</md-option>
-      </md-select>
-    </md-input-container>
-    <md-input-container class="md-block" flex-gt-sm="20">
-      <label>Adults</label>
-      <md-select ng-model="search.flightparams.adults">
-        <md-option ng-repeat="number in numberOfPeople" value="{{number}}">{{number}}</md-option>
-      </md-select>
-    </md-input-container>
-    <md-input-container class="md-block" flex-gt-sm="20">
-      <label>Children</label>
-      <md-select ng-model="search.flightparams.children">
-        <md-option ng-repeat="number in numberOfPeople" value="{{number}}">{{number}}</md-option>
-      </md-select>
-    </md-input-container>
-    <md-input-container class="md-block" flex-gt-sm="20">
-      <label>Infants</label>
-      <md-select ng-model="search.flightparams.infants">
-        <md-option ng-repeat="number in numberOfPeople" value="{{number}}">{{number}}</md-option>
-      </md-select>
-    </md-input-container>
-  </div>
+<br>
 
-  <div layout="row" layout-align="center">
-    <md-input-container class="md-block">
-      <md-switch class="md-primary" name="counter" ng-model="search.flightparams.counter">
-        Is this a International Flight?
-      </md-switch>
-    </md-input-container>
-  </div>
+<div layout-gt-sm="row" layout="column" layout-align="space-around" ng-init="numberOfPeople = [0,1,2,3,4,5,6,7,8,9]">
+  <md-input-container class="md-block" flex-gt-sm="33">
+    <label>Class</label>
+    <md-select ng-model="search.flightparams.seatingclass">
+      <md-option value="E" selected>Economy</md-option>
+      <md-option value="B">Business</md-option>
+    </md-select>
+  </md-input-container>
+  <md-input-container class="md-block" flex-gt-sm="33">
+    <label>Adults</label>
+    <md-select ng-model="search.flightparams.adults" ng-selected="{{search.flightparams.adults = 1}}">
+      <md-option ng-repeat="number in numberOfPeople" value="{{number}}">{{number}}</md-option>
+    </md-select>
+  </md-input-container>
+</div>
 
-  <div layout="row" layout-align="center">
-    <button type="submit" class="btn btn_search">Search</button>
-  </div>
+<div layout="row" layout-align="center">
+  <md-input-container class="md-block">
+    <md-switch class="md-primary" name="counter" ng-model="search.flightparams.counter">
+      Is this a International Flight?
+    </md-switch>
+  </md-input-container>
+</div>
+
+<div layout="row" layout-align="center">
+  <button type="submit" class="btn btn_search">Search</button>
+</div>
 </form>
 </md-content>
 

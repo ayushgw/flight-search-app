@@ -1,4 +1,4 @@
-export default function AuthService(AuthInit, $q, $rootScope) {
+export default function AuthService(AuthInit, $q) {
   "ngInject";
   var service = this;
 
@@ -73,6 +73,10 @@ export default function AuthService(AuthInit, $q, $rootScope) {
     return oauthlogin;
   };
 
+  service.anonymousLogin = function() {
+    return Auth.signInAnonymously();
+  }
+
   service.sendRecoveryEmail = function(email) {
     return Auth.sendPasswordResetEmail(email);
   };
@@ -81,8 +85,9 @@ export default function AuthService(AuthInit, $q, $rootScope) {
     return Auth.signOut();
   };
 
-  service.deleteUser = function(user) {
-    return Auth.deleteUser(user);
+  service.deleteUser = function() {
+    let user = Auth.currentUser();
+    Auth.deleteUser(user);
   };
 
 }

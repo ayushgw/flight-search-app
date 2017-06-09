@@ -1,3 +1,5 @@
+import LogoAccount from './Data/images/account.png';
+
 export default function EnableUIRouterErrors($trace, $transitions, $rootScope, $state, $location, AuthService) {
   "ngInject";
 
@@ -5,9 +7,24 @@ export default function EnableUIRouterErrors($trace, $transitions, $rootScope, $
 
   var Auth = AuthService.getAuth();
   $rootScope.logoutUser = function() {
-    console.log('User logged out!');
     $rootScope.isUserLoggedIn = false;
     Auth.signOut();
+  };
+
+  $rootScope.LogoAccount = LogoAccount;
+
+  $rootScope.deleteAccount = function() {
+    AuthService.deleteUser();
+    $rootScope.logoutUser();
+  };
+
+  // Anonymous Login Function
+  $rootScope.anonymousLogin = function() {
+    $rootScope.isAnonymous = true;
+    AuthService.anonymousLogin()
+    .then(function() {
+      $state.go('home.search');
+    });
   };
 
   $transitions.onStart({ to: 'home.**' }, function(trans) {
@@ -15,19 +32,16 @@ export default function EnableUIRouterErrors($trace, $transitions, $rootScope, $
     return auth.isAuthenticated()
     .then(function(result) {
       // User is Authenticated
-      console.info('User is logged in!');
       $rootScope.isUserLoggedIn = true;
     })
     .catch(function(error) {
       // User isn't Authenticated. Redirect to 'main'
-      console.error('User is not logged in!');
       $rootScope.isUserLoggedIn = false;
       return trans.router.stateService.target('main');
     });
   });
 
   $transitions.onSuccess({}, function() {
-    console.info('State Change Success');
     $rootScope.state = $state.current.name;
   });
 

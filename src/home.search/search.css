@@ -39,3 +39,28 @@ md-icon {
   border: 1px solid transparent !important;
   background-color: rgba(9, 9, 9, 0.2);
 }
+#note {
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 40px;
+}
+
+/* Autocomplete CSS */
+.autocomplete-custom-template li {
+  border-bottom: 1px solid #ccc;
+  height: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  white-space: normal;
+}
+.autocomplete-custom-template li:last-child {
+  border-bottom-width: 0;
+}
+.autocomplete-custom-template .item-title,
+.autocomplete-custom-template .item-metadata {
+  display: block;
+  line-height: 2;
+}
+.autocomplete-custom-template .item-title md-icon {
+  height: 24px;
+  width: 24px;
+}

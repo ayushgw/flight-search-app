@@ -78,6 +78,36 @@ color: white;
   padding: 10px 14px;
   text-decoration: none;
 }
+#btn_anonymous {
+  font-size: 16px;
+  text-decoration: none;
+  background-color: white;
+  color: #6B6363;
+  padding: 10px;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+#btn_anonymous:hover {
+  padding: 10px 14px;
+  text-decoration: none;
+}
+#btn_loggedUser {
+  font-size: 16px;
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+#btn_loggedUser:hover {
+  text-decoration: none;
+}
+#btn_loggedUser img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
 .yellow {
   color: #F9F154;
 }

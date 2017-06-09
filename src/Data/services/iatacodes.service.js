@@ -1,4 +1,4 @@
-import iatacodesjson from '../assets/usa-iata-codes.json';
+import iatacodesjson from '../assets/iata-codes.json';
 
 export default function IataCodesService() {
   "ngInject";
@@ -7,6 +7,6 @@ export default function IataCodesService() {
   service.getIataCodes = function() {
     var iataCodes = iatacodesjson;
     return iataCodes;
-  }
+  };
 
 }

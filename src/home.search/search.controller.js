@@ -13,10 +13,11 @@ export default function SearchController(IATACODES, $state, $rootScope) {
   function queryFilter(query) {
     var lowercaseQuery = angular.lowercase(query);
     var matches = [];
-    search.iataCodes.forEach(function(city) {
-      let lowercaseCity = angular.lowercase(city.cityname);
-      if (lowercaseCity.indexOf(lowercaseQuery) === 0) {
-        matches.push(city);
+    search.iataCodes.forEach(function(item) {
+      let airport = angular.lowercase(item.airport);
+      let country = angular.lowercase(item.country);
+      if (airport.indexOf(lowercaseQuery) === 0 || country.indexOf(lowercaseQuery) === 0) {
+        matches.push(item);
       }
     });
     return matches;
@@ -49,18 +50,16 @@ export default function SearchController(IATACODES, $state, $rootScope) {
 
   // Search for flights
   search.getResults = function(flightparams) {
-    $rootScope.isLoading = true;
-
     $state.go('home.results', {
-      sourcecity: flightparams.source.cityname,
+      sourcecity: flightparams.source.iatacode + ', ' + flightparams.source.country,
       source: flightparams.source.iatacode,
-      destinationcity: flightparams.destination.cityname,
+      destinationcity: flightparams.destination.iatacode + ', ' + flightparams.destination.country,
       destination: flightparams.destination.iatacode,
       dateofdeparture: getFormattedDate(search.date),
       seatingclass: flightparams.seatingclass,
       adults: flightparams.adults,
-      children: flightparams.children,
-      infants: flightparams.infants,
+      children: '0',
+      infants: '0',
       counter: flightparams.counter ? '0' : '100' // 100 for domestic, 0 for international
     });
   };

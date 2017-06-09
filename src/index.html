@@ -17,17 +17,34 @@
         </span>
       </div>
     </div>
-    <div class="col-md-1 pull-right">
+    <div class="col-md-1 pull-right" ng-show="isUserLoggedIn">
       <br>
-      <a id="btn_logout" ui-sref="main" ng-click="logoutUser()" ng-if="isUserLoggedIn">Logout</a>
+      <a id="btn_logout" ui-sref="main" ng-click="logoutUser()">Logout</a>
     </div>
-    <div class="col-md-2 pull-right" ng-if="isUserLoggedIn && state == 'main'">
+    <div class="col-md-2 pull-right" ng-show="isUserLoggedIn && state == 'main'">
       <br>
       <a id="btn_dashboard" ui-sref="home.search">Go To Dashboard</a>
     </div>
+    <div class="col-md-3 pull-right text-right" ng-show="!isUserLoggedIn">
+      <br>
+      <a id="btn_anonymous" ng-click="anonymousLogin()">Anonymous Login &nbsp; <i class="mdi mdi-login-variant"></i></a>
+    </div>
+    <div class="col-md-3 pull-right text-right" ng-if="isUserLoggedIn && state != 'main'">
+      <br>
+      <div class="dropdown">
+        <a id="btn_loggedUser" class="dropdown-toggle" type="button" data-toggle="dropdown">
+          <img src="{{loggedUser.photoUrl || LogoAccount}}" alt="User Photo">
+          <span>{{loggedUser.displayName || loggedUser.email || 'Anonymous User'}}</span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" ng-if="!isAnonymous">
+          <li ng-disabled="true"><a href="#">Provider: {{loggedUser.providerId}}</a></li>
+          <li><a href="/" ng-click="deleteAccount()">Delete Account</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <view-loader ng-if="isLoading"></view-loader>
   <div class="content" ui-view ng-hide="isLoading"></div>
 </body>
 </html>

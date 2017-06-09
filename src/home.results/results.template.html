@@ -5,22 +5,27 @@
     &nbsp; &nbsp;
     <h2>Flights from <span class="cityname">{{results.cities.from.cityname}}</span> to <span class="cityname">{{results.cities.to.cityname}}</span></h2>
   </div>
-  <div class="no_data" ng-if="!results.flightsdata.length">
-    Sorry no flights available from {{results.cities.from.cityname}} to {{results.cities.to.cityname}}
+  <div class="view_loader" ng-show="results.isLoading">
+    <view-loader></view-loader>
   </div>
-  <div class="results_list_container md-whiteframe-6dp" ng-show="results.flightsdata.length">
-    <ul>
-      <li layout="row" class="list_head text-center">
-        <div flex="20" class="text-center">Airlines</div>
-        <div flex="20">Departure</div>
-        <div flex="20">Destination</div>
-        <div flex="20">Duration</div>
-        <div flex="20">Price</div>
-      </li>
-      <flight-list-item dir-paginate="flight in results.flightsdata | itemsPerPage: 8" flight="flight" citycodes="results.citycodes"></flight-list-item>
-    </ul>
-  </div>
-  <div layout="row" layout-align="center">
-    <dir-pagination-controls></dir-pagination-controls>
+  <div ng-show="!results.isLoading">
+    <div class="no_data" ng-if="!results.flightsdata.length">
+      Sorry no flights available from {{results.cities.from.cityname}} to {{results.cities.to.cityname}}
+    </div>
+    <div class="results_list_container md-whiteframe-6dp" ng-show="results.flightsdata.length">
+      <ul>
+        <li layout="row" class="list_head text-center">
+          <div flex="20" class="text-center">Airlines</div>
+          <div flex="20">Departure</div>
+          <div flex="20">Destination</div>
+          <div flex="20">Duration</div>
+          <div flex="20">Price</div>
+        </li>
+        <flight-list-item dir-paginate="flight in results.flightsdata | itemsPerPage: 8" flight="flight" citycodes="results.citycodes"></flight-list-item>
+      </ul>
+    </div>
+    <div layout="row" layout-align="center">
+      <dir-pagination-controls></dir-pagination-controls>
+    </div>
   </div>
 </div>
