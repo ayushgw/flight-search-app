@@ -4,12 +4,11 @@
   <meta charset="utf-8">
   <base href="/">
   <link rel="icon" href="Data/images/favicon.png?" type="image/png">
-  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'"> -->
   <title>Flight Search App</title>
 </head>
 <body>
-  <div class="row custom_nav">
-    <div class="col-md-4">
+  <div class="custom_nav" layout="row">
+    <div flex="initial" flex-order="1" ng-cloak>
       <div class="app_logo" ui-sref="main">
         <img src="Data/images/airplane-takeoff.png">
         <span>
@@ -17,34 +16,36 @@
         </span>
       </div>
     </div>
-    <div class="col-md-1 pull-right" ng-show="isUserLoggedIn">
+    <div flex flex-order="3"></div>
+    <div flex-gt-sm="15" flex-order="5" ng-show="!isUserLoggedIn" ng-cloak>
       <br>
-      <a id="btn_logout" ui-sref="main" ng-click="logoutUser()">Logout</a>
+      <a id="btn_anonymous" ng-click="anonymousLogin()" ng-cloak>Anonymous Login &nbsp; <i class="mdi mdi-login-variant"></i></a>
     </div>
-    <div class="col-md-2 pull-right" ng-show="isUserLoggedIn && state == 'main'">
+    <div flex-gt-sm="15" flex-order="10" ng-show="isUserLoggedIn && state == 'main'" ng-cloak>
       <br>
       <a id="btn_dashboard" ui-sref="home.search">Go To Dashboard</a>
     </div>
-    <div class="col-md-3 pull-right text-right" ng-show="!isUserLoggedIn">
-      <br>
-      <a id="btn_anonymous" ng-click="anonymousLogin()">Anonymous Login &nbsp; <i class="mdi mdi-login-variant"></i></a>
-    </div>
-    <div class="col-md-3 pull-right text-right" ng-if="isUserLoggedIn && state != 'main'">
+    <div flex-gt-sm="20" flex-order="15" ng-if="isUserLoggedIn && state != 'main'" ng-cloak>
       <br>
       <div class="dropdown">
         <a id="btn_loggedUser" class="dropdown-toggle" type="button" data-toggle="dropdown">
-          <img src="{{loggedUser.photoUrl || LogoAccount}}" alt="User Photo">
+          <img ng-src="{{loggedUser.photoUrl || LogoAccount}}" alt="User Photo">
           <span>{{loggedUser.displayName || loggedUser.email || 'Anonymous User'}}</span>
           <span class="caret"></span>
         </a>
         <ul class="dropdown-menu" ng-if="!isAnonymous">
+          <li ng-disabled="true"><a href="#">Name: {{loggedUser.displayName}}</a></li>
           <li ng-disabled="true"><a href="#">Provider: {{loggedUser.providerId}}</a></li>
-          <li><a href="/" ng-click="deleteAccount()">Delete Account</a></li>
+          <li ng-disabled="true" ng-class="{'bg-success': loggedUser.emailVerified, 'bg-danger': !loggedUser.emailVerified}"><a href="#">Email: {{loggedUser.emailVerified}}</a></li>
         </ul>
       </div>
     </div>
+    <div flex-gt-sm="10" flex-order="20" ng-show="isUserLoggedIn" ng-cloak>
+      <br>
+      <a id="btn_logout" ui-sref="main" ng-click="logoutUser()">Logout</a>
+    </div>
   </div>
 
-  <div class="content" ui-view ng-hide="isLoading"></div>
+  <div class="content" ui-view ng-cloak></div>
 </body>
 </html>

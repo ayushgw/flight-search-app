@@ -22,10 +22,6 @@ body {
   background-color: rgba(9, 9, 9, 0.2);
   z-index: 999;
 }
-/*.custom_nav:hover {
-text-decoration: none;
-color: white;
-}*/
 .app_logo {
   font-weight: 600;
   font-size: 32px;
@@ -109,7 +105,7 @@ color: white;
   border-radius: 50%;
 }
 .yellow {
-  color: #F9F154;
+  color: #FF926B;
 }
 .form-control {
   border-radius: 0px !important;

@@ -11,12 +11,8 @@ export default function EnableUIRouterErrors($trace, $transitions, $rootScope, $
     Auth.signOut();
   };
 
+  // Account Image
   $rootScope.LogoAccount = LogoAccount;
-
-  $rootScope.deleteAccount = function() {
-    AuthService.deleteUser();
-    $rootScope.logoutUser();
-  };
 
   // Anonymous Login Function
   $rootScope.anonymousLogin = function() {

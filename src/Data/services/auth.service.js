@@ -1,12 +1,9 @@
-export default function AuthService(AuthInit, $q) {
+export default function AuthService(AuthInit, $q, $rootScope) {
   "ngInject";
   var service = this;
 
   // Initializing Firebase Auth Object
   var Auth = AuthInit.Auth();
-  // var GoogleProvider = AuthInit.GoogleProvider;
-  // var GithubProvider = AuthInit.GithubProvider;
-  // var FacebookProvider = AuthInit.FacebookProvider;
 
   service.getAuth = function() {
     return Auth;
@@ -18,6 +15,7 @@ export default function AuthService(AuthInit, $q) {
 
     Auth.onAuthStateChanged(function(user) {
       if (user) {
+        $rootScope.loggedUser = user;
         flag = true;
         return deferred.resolve(flag);
       } else {
@@ -35,10 +33,10 @@ export default function AuthService(AuthInit, $q) {
     let User = (user || Auth.currentUser());
     User.sendEmailVerification()
     .then(function() {
-      console.log('Email Verification Sent!');
+      // console.log('Email Verification Sent!');
     })
     .catch(function() {
-      console.log('Email Verification could not be sent!');
+      // console.log('Email Verification could not be sent!');
     });
   };
 
@@ -60,9 +58,6 @@ export default function AuthService(AuthInit, $q) {
     let AuthProvider = AuthInit[provider];
     let oauthlogin = Auth.signInWithPopup(AuthProvider);
     oauthlogin.then(function(result) {
-      let token = result.credential.accessToken;
-      console.log('User LoggedIn with ' + provider + '. Token: ' + token);
-
       let user = result.user;
       return user;
     })

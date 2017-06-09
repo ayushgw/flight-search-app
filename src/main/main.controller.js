@@ -35,7 +35,6 @@ export default function MainController(AuthService, $state, $rootScope) {
       $rootScope.$digest();
     })
     .catch(function(err) {
-      console.log(err);
       main.toggleSpinner('register');
       var errormsg = "User could not be registered!";
       main.displayError('register', errormsg);
@@ -46,8 +45,6 @@ export default function MainController(AuthService, $state, $rootScope) {
     main.spinner.login = true;
     let userlogin = AuthService.loginUser(user)
     userlogin.then(function(result) {
-      $rootScope.loggedUser = result.providerData[0];
-      console.log($rootScope.loggedUser);
       main.toggleSpinner('login');
       $state.go('home.search');
     })
@@ -62,12 +59,10 @@ export default function MainController(AuthService, $state, $rootScope) {
     let Provider = provider + 'Provider';
     let oauthlogin = AuthService.oauthUserLogin(Provider);
     oauthlogin.then(function(result) {
-      $rootScope.loggedUser = result.user.providerData[0];
-      console.log($rootScope.loggedUser);
       $state.go('home.search');
     })
     .catch(function(error) {
-      console.log(error);
+      // console.log(error);
     });
   };
 
@@ -81,7 +76,6 @@ export default function MainController(AuthService, $state, $rootScope) {
       $rootScope.$digest();
     })
     .catch(function(error) {
-      console.log(error);
       main.toggleSpinner('forgotpassword');
       var errormsg = "There is no user record corresponding to this email. The user may have been deleted.";
       main.displayError('forgotpassword', errormsg);
