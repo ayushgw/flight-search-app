@@ -30,13 +30,13 @@
       <div class="dropdown">
         <a id="btn_loggedUser" class="dropdown-toggle" type="button" data-toggle="dropdown">
           <img ng-src="{{loggedUser.photoUrl || LogoAccount}}" alt="User Photo">
-          <span>{{loggedUser.displayName || loggedUser.email || 'Anonymous User'}}</span>
+          <span>{{loggedUser.email || 'Anonymous User'}}</span>
           <span class="caret"></span>
         </a>
         <ul class="dropdown-menu" ng-if="!isAnonymous">
           <li ng-disabled="true"><a href="#">Name: {{loggedUser.displayName}}</a></li>
           <li ng-disabled="true"><a href="#">Provider: {{loggedUser.providerId}}</a></li>
-          <li ng-disabled="true" ng-class="{'bg-success': loggedUser.emailVerified, 'bg-danger': !loggedUser.emailVerified}"><a href="#">Email: {{loggedUser.emailVerified}}</a></li>
+          <li ng-disabled="true" ng-class="{'bg-success': loggedUser.emailVerified, 'bg-danger': !loggedUser.emailVerified}"><a href="#">Email Verified: {{loggedUser.emailVerified}}</a></li>
         </ul>
       </div>
     </div>
