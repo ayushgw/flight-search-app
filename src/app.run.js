@@ -8,6 +8,7 @@ export default function EnableUIRouterErrors($trace, $transitions, $rootScope, $
   var Auth = AuthService.getAuth();
   $rootScope.logoutUser = function() {
     $rootScope.isUserLoggedIn = false;
+    $rootScope.isAnonymous = false;
     Auth.signOut();
   };
 

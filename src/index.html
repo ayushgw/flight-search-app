@@ -33,10 +33,11 @@
           <span>{{loggedUser.email || 'Anonymous User'}}</span>
           <span class="caret"></span>
         </a>
-        <ul class="dropdown-menu" ng-if="!isAnonymous">
-          <li ng-disabled="true"><a href="#">Name: {{loggedUser.displayName}}</a></li>
-          <li ng-disabled="true"><a href="#">Provider: {{loggedUser.providerId}}</a></li>
-          <li ng-disabled="true" ng-class="{'bg-success': loggedUser.emailVerified, 'bg-danger': !loggedUser.emailVerified}"><a href="#">Email Verified: {{loggedUser.emailVerified}}</a></li>
+        <ul class="dropdown-menu">
+          <li><a href="#">Name: {{loggedUser.displayName || 'null'}}</a></li>
+          <li><a href="#">Provider: {{loggedUser.providerData[0].providerId || 'null'}}</a></li>
+          <li><a href="#">Anonymous: {{loggedUser.isAnonymous}}</a></li>
+          <li ng-class="{'bg-success': loggedUser.emailVerified, 'bg-danger': !loggedUser.emailVerified}"><a href="#">Email Verified: {{loggedUser.emailVerified}}</a></li>
         </ul>
       </div>
     </div>

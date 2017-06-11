@@ -25,16 +25,23 @@ export default function SearchController(IATACODES, $state, $rootScope) {
 
   // Cities + IATA Codes
   search.iataCodes = IATACODES;
-  search.searchAirport = function(query) {
-    let results = query ? queryFilter(query) : search.iataCodes;
+  search.searchAirport = function(query, exclude) {
+    let results = query ? queryFilter(query) : angular.copy(search.iataCodes);
+    // let exclude = (search.flightparams.source || search.flightparams.destination);
+    if(exclude) {
+      let code = exclude.iatacode;
+      let index = results.findIndex(value => value.iatacode === code);
+      console.log(index);
+      results.splice(index, 1);
+    }
     return results;
   };
 
   // Interchange Search Cities
   search.interchangeSearchCities = function() {
-    let temp = search.source;
-    search.source = search.destination;
-    search.destination = temp;
+    let temp = search.flightparams.source;
+    search.flightparams.source = search.flightparams.destination;
+    search.flightparams.destination = temp;
   };
 
   function getFormattedDate(dateObj) {
@@ -43,7 +50,6 @@ export default function SearchController(IATACODES, $state, $rootScope) {
     month = (month < 10) ? '0' + month : month;
     let date = dateObj.getDate();
     date = (date < 10) ? '0' + date : date;
-
     let finaldate = year + month + date;
     return finaldate;
   }

@@ -16,6 +16,7 @@ export default function AuthService(AuthInit, $q, $rootScope) {
     Auth.onAuthStateChanged(function(user) {
       if (user) {
         $rootScope.loggedUser = user;
+        console.log(user);
         flag = true;
         return deferred.resolve(flag);
       } else {
